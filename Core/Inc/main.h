@@ -69,6 +69,8 @@ void Error_Handler(void);
 #define PH0_MCU_GPIO_Port GPIOH
 #define PH1_MCU_Pin GPIO_PIN_1
 #define PH1_MCU_GPIO_Port GPIOH
+#define LCD_CS_Pin GPIO_PIN_4
+#define LCD_CS_GPIO_Port GPIOA
 #define LD1_Pin GPIO_PIN_0
 #define LD1_GPIO_Port GPIOB
 #define LCD_RST_Pin GPIO_PIN_12
