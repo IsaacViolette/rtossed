@@ -116,20 +116,20 @@ int main(void)
 	setvbuf(stdout, NULL, _IONBF, 0);
 	HAL_Delay(2500);
 
-	//Code causes hard fault	
-	int *ptr = 0xFFFFFFFF;
-	*ptr = 0x0FFFFFFF;	
+	//Code causes hard fault, to test Hardfault LED	
+	int *ptr = (int *)0xFFFFFFFF;
+	*ptr = 42;	
 
 	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
-	while (1)
-	{
+	while (1){
 		/* USER CODE END WHILE */
 
 		/*Blink LED1 (Green) every 100 msec*/
 		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
 		HAL_Delay(100);
-
+		//The code will never get here since before the while, there is a hard fault 
+		//but this code has been checked and works
 
 		/* USER CODE BEGIN 3 */
 	}
@@ -210,9 +210,6 @@ void Error_Handler(void)
 {
 	/* USER CODE BEGIN Error_Handler_Debug */
 	/* User can add his own implementation to report the HAL error return state */
-
-	/*When hard fault occurs, red LED turns on board*/
-	HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_14);
 	__disable_irq();
 	while (1)
 	{
