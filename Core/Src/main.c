@@ -101,7 +101,7 @@ int main(void)
 
 	/* USER CODE END 2 */
 	//String used to print onto display
-	char buf[] = "";
+	char buf[] = "ECE331";
 	
 	//Preliminary code for TFT to work
 	HAL_GPIO_WritePin(BACK_LITE_GPIO_Port,BACK_LITE_Pin,1);
@@ -116,24 +116,12 @@ int main(void)
 	setvbuf(stdout, NULL, _IONBF, 0);
 	HAL_Delay(2500);
 
-	//Code causes hard fault, to test Hardfault LED	
-	int *ptr = (int *)0xFFFFFFFF;
-	*ptr = 42;	
-
-	/* Infinite loop */
 	/* USER CODE BEGIN WHILE */
 	while (1){
-		/* USER CODE END WHILE */
+		
 
-		/*Blink LED1 (Green) every 100 msec*/
-		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
-		HAL_Delay(100);
-		//The code will never get here since before the while, there is a hard fault 
-		//but this code has been checked and works
 
-		/* USER CODE BEGIN 3 */
 	}
-	/* USER CODE END 3 */
 }
 
 /**
