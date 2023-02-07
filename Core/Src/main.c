@@ -28,6 +28,7 @@
 #include "gfxfont.h"
 #include "graphics.h"
 #include <stdio.h>
+#include <string.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -71,26 +72,35 @@ void SystemClock_Config(void);
   */
 
 /*This function returns an array of characters which a user inputs through the command line*/
-void getline()
+void getline_sh(char buf[])
 {
-	char buf[];
-	char input = getchar();
 	int i = 0;
+	char input = getchar();
 
 	while(1) {
 		if((input == '\r') || (input == '\n'))	
 			break;
-		if(input == '\b')
-			Not sure yet about this
+		//if(input == '\b')
+		//	Not sure yet about this
 		buf[i] = input;
+		i++;
 		input = getchar();
 	}
-	return buf[];
+	//printf("%d\r", i);
 }
 
-int shell()
-{
 
+int sh()
+{
+	char buf[2048];
+	getline_sh(buf);
+
+	if(strncmp(buf,"echo ",5))
+	{
+		printf("Echo was there\n");
+	}
+
+	return 1;
 }
 
 
@@ -142,11 +152,10 @@ int main(void)
 	setvbuf(stdout, NULL, _IONBF, 0);
 	HAL_Delay(2500);
 
+
 	/* USER CODE BEGIN WHILE */
-	while (1){
-		
-
-
+	while (1) {
+		sh();
 	}
 }
 
