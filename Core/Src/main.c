@@ -27,6 +27,7 @@
 #include "Adafruit_ST7735.h"
 #include "gfxfont.h"
 #include "graphics.h"
+#include <stdio.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -68,6 +69,31 @@ void SystemClock_Config(void);
   * @brief  The application entry point.
   * @retval int
   */
+
+/*This function returns an array of characters which a user inputs through the command line*/
+void getline()
+{
+	char buf[];
+	char input = getchar();
+	int i = 0;
+
+	while(1) {
+		if((input == '\r') || (input == '\n'))	
+			break;
+		if(input == '\b')
+			Not sure yet about this
+		buf[i] = input;
+		input = getchar();
+	}
+	return buf[];
+}
+
+int shell()
+{
+
+}
+
+
 int main(void)
 {
 	/* USER CODE BEGIN 1 */
