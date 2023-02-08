@@ -84,31 +84,39 @@ void getline_sh(char buf[])
 		//	Not sure yet about this
 
 		buf[i] = input;
-		if(i == 8)
+		if(i == 510)
 			i--;
 		
 		i++;
 		input = getchar();
 
 	}
-	if(i != 8)
+	if(i != 510)
 		buf[i] = '\0';
 	else
-		buf[9] = '\0';
+		buf[511] = '\0';
 }
 
 
 int sh()
 {
-	char buf[10];
+	char buf[512];
+	char print_buf[512];
 	getline_sh(buf);
 
-	//printf("%s\n", buf);
+	printf("%s\n", buf);
 
 	if(strncmp(buf,"echo ",5) == 0)
 	{
+		for (int i = 5; i < 512; i++){
+			if(buf[i] == '\0') {
+				break;
+			}
+			buf[i] = print_buf[i-5];
+		}
+		printf("%s\n", print_buf);
 
-		printf("Echo was there\n");
+		//printf("Echo was there\n");
 	}
 
 	return 1;
