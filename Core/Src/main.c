@@ -84,17 +84,17 @@ void getline_sh(char buf[])
 		//	Not sure yet about this
 
 		buf[i] = input;
-		if(i == 9)
+		if(i == 8)
 			i--;
 		
 		i++;
 		input = getchar();
 
 	}
-	if(i != 9)
+	if(i != 8)
 		buf[i] = '\0';
 	else
-		buf[10] = '\0';
+		buf[9] = '\0';
 }
 
 
@@ -102,6 +102,8 @@ int sh()
 {
 	char buf[10];
 	getline_sh(buf);
+
+	//printf("%s\n", buf);
 
 	if(strncmp(buf,"echo ",5) == 0)
 	{
