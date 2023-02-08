@@ -78,19 +78,24 @@ void getline_sh(char buf[])
 	char input = getchar();
 
 	while(1) {
+		printf("%c",input);
 		if((input == '\r') || (input == '\n'))	
 			break;
-		//if(input == '\b')
-		//	Not sure yet about this
-
-		buf[i] = input;
-		if(i == 510)
+		if(input == '\b') {
 			i--;
-		
-		i++;
-		input = getchar();
-
+			buf[i] = '\0';
+			printf(" \b");
+			input = getchar();
+		}
+		else {
+			buf[i] = input;
+			if(i == 510)
+				i--;
+			i++;
+			input = getchar();
+		}
 	}
+	printf("\n");
 	if(i != 510)
 		buf[i] = '\0';
 	else
