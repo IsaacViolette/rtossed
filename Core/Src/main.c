@@ -75,27 +75,33 @@ void SystemClock_Config(void);
 void getline_sh(char buf[])
 {
 	int i = 0;
-	char input = getchar();
+	char input;
 
 	while(1) {
-		printf("%c",input);
-		if((input == '\r') || (input == '\n'))	
-			break;
-		if(input == '\b') {
+		input = getchar();
+		if(input != '\b') {
+
+			if((input == '\r') || (input == '\n'))	
+				break;
+			else {
+				printf("%c",input);
+				buf[i] = input;
+				if(i == 510)
+					i--;
+				i++;
+			}
+		}
+
+		if ((input == '\b') && (i != 0)) {
+			printf("%c",input);
 			i--;
 			buf[i] = '\0';
 			printf(" \b");
-			input = getchar();
 		}
-		else {
-			buf[i] = input;
-			if(i == 510)
-				i--;
-			i++;
-			input = getchar();
-		}
+		if ((input == '\b') && (i == 0))
+			i = 0;
 	}
-	printf("\n");
+	printf("\n\r");
 	if(i != 510)
 		buf[i] = '\0';
 	else
@@ -107,6 +113,7 @@ int sh()
 {
 	char buf[512];
 	char print_buf[512];
+	printf("$ ");
 	getline_sh(buf);
 
 	if(strncmp(buf,"echo ",5) == 0)
@@ -118,7 +125,7 @@ int sh()
 			}
 			print_buf[i] = buf[i+5];
 		}
-		printf("%s\n", print_buf);
+		printf("%s\n\r", print_buf);
 	}
 
 	return 1;
