@@ -82,21 +82,30 @@ void getline_sh(char buf[])
 			break;
 		//if(input == '\b')
 		//	Not sure yet about this
+
 		buf[i] = input;
+		if(i == 9)
+			i--;
+		
 		i++;
 		input = getchar();
+
 	}
-	//printf("%d\r", i);
+	if(i != 9)
+		buf[i] = '\0';
+	else
+		buf[10] = '\0';
 }
 
 
 int sh()
 {
-	char buf[2048];
+	char buf[10];
 	getline_sh(buf);
 
-	if(strncmp(buf,"echo ",5))
+	if(strncmp(buf,"echo ",5) == 0)
 	{
+
 		printf("Echo was there\n");
 	}
 
