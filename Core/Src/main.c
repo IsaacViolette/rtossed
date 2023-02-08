@@ -104,19 +104,16 @@ int sh()
 	char print_buf[512];
 	getline_sh(buf);
 
-	printf("%s\n", buf);
-
 	if(strncmp(buf,"echo ",5) == 0)
 	{
-		for (int i = 5; i < 512; i++){
-			if(buf[i] == '\0') {
+		for (int i = 0; i < 512; i++){
+			if(buf[i+5] == '\0') {
+				print_buf[i] = '\0';
 				break;
 			}
-			buf[i] = print_buf[i-5];
+			print_buf[i] = buf[i+5];
 		}
 		printf("%s\n", print_buf);
-
-		//printf("Echo was there\n");
 	}
 
 	return 1;
