@@ -14,7 +14,7 @@ _ssize_t _write_r (struct _reent *ptr, int fd, const void *buf, size_t cnt)
 	return _write(fd, (char *)buf, cnt);
 }
 
-
+/*Read 1 byte of data from user input*/
 _ssize_t _read_r(struct _reent *ptr, int fd, void *buf, size_t cnt)
 {
 	HAL_StatusTypeDef ret;
