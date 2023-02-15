@@ -194,7 +194,7 @@ int main(void)
 
 
 	/* USER CODE BEGIN WHILE */
-	process1();
+	process2();
 	while (1) {
 		sh();
 	}
