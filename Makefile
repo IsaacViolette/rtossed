@@ -36,6 +36,8 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
+Core/Src/progs.c \
+Core/Src/process.c \
 Core/Src/syscalls.c \
 Core/Src/main.c \
 Core/Src/gpio.c \
