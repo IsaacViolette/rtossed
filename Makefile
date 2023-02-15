@@ -36,6 +36,7 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
+Core/Src/sh.c \
 Core/Src/progs.c \
 Core/Src/process.c \
 Core/Src/syscalls.c \
