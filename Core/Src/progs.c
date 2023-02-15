@@ -1,7 +1,7 @@
 /*Includes*/
 #include "progs.h"
 
-void process1()
+void process1(void)
 {
 	while(1) {
 		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
@@ -9,7 +9,7 @@ void process1()
 	}
 }
 
-void process2()
+void process2(void)
 {
 	while(1) {
 		HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_1);

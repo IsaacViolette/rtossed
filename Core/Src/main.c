@@ -29,6 +29,7 @@
 #include "graphics.h"
 #include <stdio.h>
 #include <string.h>
+#include <progs.h>
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -193,7 +194,7 @@ int main(void)
 
 
 	/* USER CODE BEGIN WHILE */
-	/*Run the shell program continuously*/
+	process1();
 	while (1) {
 		sh();
 	}

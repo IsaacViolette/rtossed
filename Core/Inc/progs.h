@@ -5,8 +5,8 @@
 #ifndef __PROGS_H
 #define __PROGS_H
 
-void process1();
+void process1(void);
 
-void process2();
+void process2(void);
 
 #endif /*__MAIN_H*/
