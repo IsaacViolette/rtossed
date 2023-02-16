@@ -35,6 +35,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+extern int kready;
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -119,7 +121,8 @@ int main(void)
 
 	/* USER CODE BEGIN WHILE */
 	while (1) {
-		sh();
+		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_1);
+		HAL_Delay(100);
 	}
 }
 
