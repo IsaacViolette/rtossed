@@ -35,7 +35,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-extern int kready;
+int kready = 0;
 
 /* USER CODE END Includes */
 
@@ -120,6 +120,7 @@ int main(void)
 
 
 	/* USER CODE BEGIN WHILE */
+	kready = 1;
 	while (1) {
 		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_1);
 		HAL_Delay(100);
