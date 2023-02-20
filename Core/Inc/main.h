@@ -29,9 +29,8 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32h7xx_hal.h"
 
-/*Indicates that the system is intialized and userspace process may start*/
+/*Indicates that the system is initialized and userspace process may start*/
 extern int kready;
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -76,8 +75,10 @@ void Error_Handler(void);
 #define LCD_CS_GPIO_Port GPIOA
 #define LD1_Pin GPIO_PIN_0
 #define LD1_GPIO_Port GPIOB
-#define User_LED_Pin GPIO_PIN_1
-#define User_LED_GPIO_Port GPIOB
+#define IDLE_LED_Pin GPIO_PIN_1
+#define IDLE_LED_GPIO_Port GPIOB
+#define SysTick_LED_Pin GPIO_PIN_2
+#define SysTick_LED_GPIO_Port GPIOB
 #define LCD_RST_Pin GPIO_PIN_12
 #define LCD_RST_GPIO_Port GPIOB
 #define LCD_D_C_Pin GPIO_PIN_13
