@@ -1,0 +1,563 @@
+Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/system_stm32h7xx_dualcore_bootcm7_cm4gated.c:    SCB->CPACR |= ((3UL << (10*2))|(3UL << (11*2)));  /* set CP10 and CP11 Full Access */
+Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/system_stm32h7xx_dualcore_bootcm7_cm4gated.c:  SCB->VTOR = VECT_TAB_BASE_ADDRESS | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal D2 AXI-RAM or in Internal FLASH */
+Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/system_stm32h7xx_dualcore_bootcm7_cm4gated.c:  SCB->VTOR = VECT_TAB_BASE_ADDRESS | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal D1 AXI-RAM or in Internal FLASH */
+Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/system_stm32h7xx_singlecore.c:    SCB->CPACR |= ((3UL << (10*2))|(3UL << (11*2)));  /* set CP10 and CP11 Full Access */
+Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/system_stm32h7xx_singlecore.c:  SCB->VTOR = VECT_TAB_BASE_ADDRESS | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal D1 AXI-RAM or in Internal FLASH */
+Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/system_stm32h7xx_dualcore_boot_cm4_cm7.c:    SCB->CPACR |= ((3UL << (10*2))|(3UL << (11*2)));  /* set CP10 and CP11 Full Access */
+Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/system_stm32h7xx_dualcore_boot_cm4_cm7.c: SCB->SCR |= SCB_SCR_SEVONPEND_Msk;
+Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/system_stm32h7xx_dualcore_boot_cm4_cm7.c:  SCB->VTOR = VECT_TAB_BASE_ADDRESS | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal D2 AXI-RAM or in Internal FLASH */
+Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/system_stm32h7xx_dualcore_boot_cm4_cm7.c:  SCB->VTOR = VECT_TAB_BASE_ADDRESS | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal D1 AXI-RAM or in Internal FLASH */
+Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/system_stm32h7xx_dualcore_bootcm4_cm7gated.c:    SCB->CPACR |= ((3UL << (10*2))|(3UL << (11*2)));  /* set CP10 and CP11 Full Access */
+Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/system_stm32h7xx_dualcore_bootcm4_cm7gated.c:  SCB->VTOR = VECT_TAB_BASE_ADDRESS | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal D2 AXI-RAM or in Internal FLASH */
+Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/system_stm32h7xx_dualcore_bootcm4_cm7gated.c:  SCB->VTOR = VECT_TAB_BASE_ADDRESS | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal D1 AXI-RAM or in Internal FLASH */
+Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/system_stm32h7xx.c:    SCB->CPACR |= ((3UL << (10*2))|(3UL << (11*2)));  /* set CP10 and CP11 Full Access */
+Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/system_stm32h7xx.c:  SCB->VTOR = VECT_TAB_BASE_ADDRESS | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal D2 AXI-RAM or in Internal FLASH */
+Drivers/CMSIS/Device/ST/STM32H7xx/Source/Templates/system_stm32h7xx.c:  SCB->VTOR = VECT_TAB_BASE_ADDRESS | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal D1 AXI-RAM or in Internal FLASH */
+Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/cifar10/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/cifar10/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CPACR |= ((3U << 10*2) |           /* set CP10 Full Access */
+Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/cifar10/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/cifar10/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/cifar10/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CPACR |= ((3U << 10*2) |           /* set CP10 Full Access */
+Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/cifar10/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/cifar10/RTE/Device/ARMCM3/system_ARMCM3.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/gru/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/gru/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CPACR |= ((3U << 10*2) |           /* set CP10 Full Access */
+Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/gru/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/gru/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/gru/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CPACR |= ((3U << 10*2) |           /* set CP10 Full Access */
+Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/gru/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/NN/Examples/ARM/arm_nn_examples/gru/RTE/Device/ARMCM3/system_ARMCM3.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CPACR |= ((3U << 10*2) |           /* set CP10 Full Access */
+Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CPACR |= ((3U << 10*2) |           /* set CP10 Full Access */
+Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/ARMCM4/system_ARMCM4.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/ARMCM4/system_ARMCM4.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* set CP10 Full Access */
+Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/ARMCM4/system_ARMCM4.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/STM32F411RETx/system_stm32f4xx.c:    SCB->CPACR |= ((3UL << 10*2)|(3UL << 11*2));  /* set CP10 and CP11 Full Access */
+Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/STM32F411RETx/system_stm32f4xx.c:  SCB->VTOR = SRAM_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal SRAM */
+Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/STM32F411RETx/system_stm32f4xx.c:  SCB->VTOR = FLASH_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal FLASH */
+Drivers/CMSIS/NN/NN_Lib_Tests/nn_test/RTE/Device/ARMCM3/system_ARMCM3.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/Include/core_cm33.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Include/core_cm33.h:  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+Drivers/CMSIS/Include/core_cm33.h:  SCB->AIRCR =  reg_value;
+Drivers/CMSIS/Include/core_cm33.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Include/core_cm33.h:  return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+Drivers/CMSIS/Include/core_cm33.h:    SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+Drivers/CMSIS/Include/core_cm33.h:    return(((uint32_t)SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Include/core_cm33.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Include/core_cm33.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Include/core_cm33.h:  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+Drivers/CMSIS/Include/core_cm33.h:                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+Drivers/CMSIS/Include/core_cm33.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Include/core_cm33.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Include/core_sc000.h:    SCB->SHP[_SHP_IDX(IRQn)] = ((uint32_t)(SCB->SHP[_SHP_IDX(IRQn)] & ~(0xFFUL << _BIT_SHIFT(IRQn))) |
+Drivers/CMSIS/Include/core_sc000.h:    return((uint32_t)(((SCB->SHP[_SHP_IDX(IRQn)] >> _BIT_SHIFT(IRQn) ) & (uint32_t)0xFFUL) >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Include/core_sc000.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Include/core_sc000.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Include/core_sc000.h:  SCB->AIRCR  = ((0x5FAUL << SCB_AIRCR_VECTKEY_Pos) |
+Drivers/CMSIS/Include/core_cm23.h:    SCB->SHPR[_SHP_IDX(IRQn)] = ((uint32_t)(SCB->SHPR[_SHP_IDX(IRQn)] & ~(0xFFUL << _BIT_SHIFT(IRQn))) |
+Drivers/CMSIS/Include/core_cm23.h:    return((uint32_t)(((SCB->SHPR[_SHP_IDX(IRQn)] >> _BIT_SHIFT(IRQn) ) & (uint32_t)0xFFUL) >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Include/core_cm23.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Include/core_cm23.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Include/core_cm23.h:  SCB->AIRCR  = ((0x5FAUL << SCB_AIRCR_VECTKEY_Pos) |
+Drivers/CMSIS/Include/core_cm7.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Include/core_cm7.h:  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+Drivers/CMSIS/Include/core_cm7.h:  SCB->AIRCR =  reg_value;
+Drivers/CMSIS/Include/core_cm7.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Include/core_cm7.h:  return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+Drivers/CMSIS/Include/core_cm7.h:    SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+Drivers/CMSIS/Include/core_cm7.h:    return(((uint32_t)SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Include/core_cm7.h:  uint32_t vectors = (uint32_t )SCB->VTOR;
+Drivers/CMSIS/Include/core_cm7.h:  uint32_t vectors = (uint32_t )SCB->VTOR;
+Drivers/CMSIS/Include/core_cm7.h:  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+Drivers/CMSIS/Include/core_cm7.h:                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+Drivers/CMSIS/Include/core_cm7.h:  mvfr0 = SCB->MVFR0;
+Drivers/CMSIS/Include/core_cm7.h:    if (SCB->CCR & SCB_CCR_IC_Msk) return;  /* return if ICache is already enabled */
+Drivers/CMSIS/Include/core_cm7.h:    SCB->ICIALLU = 0UL;                     /* invalidate I-Cache */
+Drivers/CMSIS/Include/core_cm7.h:    SCB->CCR |=  (uint32_t)SCB_CCR_IC_Msk;  /* enable I-Cache */
+Drivers/CMSIS/Include/core_cm7.h:    SCB->CCR &= ~(uint32_t)SCB_CCR_IC_Msk;  /* disable I-Cache */
+Drivers/CMSIS/Include/core_cm7.h:    SCB->ICIALLU = 0UL;                     /* invalidate I-Cache */
+Drivers/CMSIS/Include/core_cm7.h:    SCB->ICIALLU = 0UL;
+Drivers/CMSIS/Include/core_cm7.h:        SCB->ICIMVAU = op_addr;             /* register accepts only 32byte aligned values, only bits 31..5 are valid */
+Drivers/CMSIS/Include/core_cm7.h:    if (SCB->CCR & SCB_CCR_DC_Msk) return;  /* return if DCache is already enabled */
+Drivers/CMSIS/Include/core_cm7.h:    SCB->CSSELR = 0U;                       /* select Level 1 data cache */
+Drivers/CMSIS/Include/core_cm7.h:    ccsidr = SCB->CCSIDR;
+Drivers/CMSIS/Include/core_cm7.h:        SCB->DCISW = (((sets << SCB_DCISW_SET_Pos) & SCB_DCISW_SET_Msk) |
+Drivers/CMSIS/Include/core_cm7.h:    SCB->CCR |=  (uint32_t)SCB_CCR_DC_Msk;  /* enable D-Cache */
+Drivers/CMSIS/Include/core_cm7.h:    SCB->CSSELR = 0U;                       /* select Level 1 data cache */
+Drivers/CMSIS/Include/core_cm7.h:    SCB->CCR &= ~(uint32_t)SCB_CCR_DC_Msk;  /* disable D-Cache */
+Drivers/CMSIS/Include/core_cm7.h:    ccsidr = SCB->CCSIDR;
+Drivers/CMSIS/Include/core_cm7.h:        SCB->DCCISW = (((sets << SCB_DCCISW_SET_Pos) & SCB_DCCISW_SET_Msk) |
+Drivers/CMSIS/Include/core_cm7.h:    SCB->CSSELR = 0U;                       /* select Level 1 data cache */
+Drivers/CMSIS/Include/core_cm7.h:    ccsidr = SCB->CCSIDR;
+Drivers/CMSIS/Include/core_cm7.h:        SCB->DCISW = (((sets << SCB_DCISW_SET_Pos) & SCB_DCISW_SET_Msk) |
+Drivers/CMSIS/Include/core_cm7.h:    SCB->CSSELR = 0U;                       /* select Level 1 data cache */
+Drivers/CMSIS/Include/core_cm7.h:    ccsidr = SCB->CCSIDR;
+Drivers/CMSIS/Include/core_cm7.h:        SCB->DCCSW = (((sets << SCB_DCCSW_SET_Pos) & SCB_DCCSW_SET_Msk) |
+Drivers/CMSIS/Include/core_cm7.h:    SCB->CSSELR = 0U;                       /* select Level 1 data cache */
+Drivers/CMSIS/Include/core_cm7.h:    ccsidr = SCB->CCSIDR;
+Drivers/CMSIS/Include/core_cm7.h:        SCB->DCCISW = (((sets << SCB_DCCISW_SET_Pos) & SCB_DCCISW_SET_Msk) |
+Drivers/CMSIS/Include/core_cm7.h:        SCB->DCIMVAC = op_addr;             /* register accepts only 32byte aligned values, only bits 31..5 are valid */
+Drivers/CMSIS/Include/core_cm7.h:        SCB->DCCMVAC = op_addr;             /* register accepts only 32byte aligned values, only bits 31..5 are valid */
+Drivers/CMSIS/Include/core_cm7.h:        SCB->DCCIMVAC = op_addr;            /* register accepts only 32byte aligned values, only bits 31..5 are valid */
+Drivers/CMSIS/Include/core_armv8mbl.h:    SCB->SHPR[_SHP_IDX(IRQn)] = ((uint32_t)(SCB->SHPR[_SHP_IDX(IRQn)] & ~(0xFFUL << _BIT_SHIFT(IRQn))) |
+Drivers/CMSIS/Include/core_armv8mbl.h:    return((uint32_t)(((SCB->SHPR[_SHP_IDX(IRQn)] >> _BIT_SHIFT(IRQn) ) & (uint32_t)0xFFUL) >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Include/core_armv8mbl.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Include/core_armv8mbl.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Include/core_armv8mbl.h:  SCB->AIRCR  = ((0x5FAUL << SCB_AIRCR_VECTKEY_Pos) |
+Drivers/CMSIS/Include/mpu_armv8.h:  SCB->SHCSR |= SCB_SHCSR_MEMFAULTENA_Msk;
+Drivers/CMSIS/Include/mpu_armv8.h:  SCB->SHCSR &= ~SCB_SHCSR_MEMFAULTENA_Msk;
+Drivers/CMSIS/Include/core_cm4.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Include/core_cm4.h:  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+Drivers/CMSIS/Include/core_cm4.h:  SCB->AIRCR =  reg_value;
+Drivers/CMSIS/Include/core_cm4.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Include/core_cm4.h:  return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+Drivers/CMSIS/Include/core_cm4.h:    SCB->SHP[(((uint32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+Drivers/CMSIS/Include/core_cm4.h:    return(((uint32_t)SCB->SHP[(((uint32_t)IRQn) & 0xFUL)-4UL] >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Include/core_cm4.h:  uint32_t vectors = (uint32_t )SCB->VTOR;
+Drivers/CMSIS/Include/core_cm4.h:  uint32_t vectors = (uint32_t )SCB->VTOR;
+Drivers/CMSIS/Include/core_cm4.h:  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+Drivers/CMSIS/Include/core_cm4.h:                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+Drivers/CMSIS/Include/core_cm3.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Include/core_cm3.h:  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+Drivers/CMSIS/Include/core_cm3.h:  SCB->AIRCR =  reg_value;
+Drivers/CMSIS/Include/core_cm3.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Include/core_cm3.h:  return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+Drivers/CMSIS/Include/core_cm3.h:    SCB->SHP[(((uint32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+Drivers/CMSIS/Include/core_cm3.h:    return(((uint32_t)SCB->SHP[(((uint32_t)IRQn) & 0xFUL)-4UL] >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Include/core_cm3.h:  uint32_t vectors = (uint32_t )SCB->VTOR;
+Drivers/CMSIS/Include/core_cm3.h:  uint32_t vectors = (uint32_t )SCB->VTOR;
+Drivers/CMSIS/Include/core_cm3.h:  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+Drivers/CMSIS/Include/core_cm3.h:                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+Drivers/CMSIS/Include/core_cm0plus.h:    SCB->SHP[_SHP_IDX(IRQn)] = ((uint32_t)(SCB->SHP[_SHP_IDX(IRQn)] & ~(0xFFUL << _BIT_SHIFT(IRQn))) |
+Drivers/CMSIS/Include/core_cm0plus.h:    return((uint32_t)(((SCB->SHP[_SHP_IDX(IRQn)] >> _BIT_SHIFT(IRQn) ) & (uint32_t)0xFFUL) >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Include/core_cm0plus.h:  uint32_t vectors = SCB->VTOR;
+Drivers/CMSIS/Include/core_cm0plus.h:  uint32_t vectors = SCB->VTOR;
+Drivers/CMSIS/Include/core_cm0plus.h:  SCB->AIRCR  = ((0x5FAUL << SCB_AIRCR_VECTKEY_Pos) |
+Drivers/CMSIS/Include/core_sc300.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Include/core_sc300.h:  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+Drivers/CMSIS/Include/core_sc300.h:  SCB->AIRCR =  reg_value;
+Drivers/CMSIS/Include/core_sc300.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Include/core_sc300.h:  return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+Drivers/CMSIS/Include/core_sc300.h:    SCB->SHP[(((uint32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+Drivers/CMSIS/Include/core_sc300.h:    return(((uint32_t)SCB->SHP[(((uint32_t)IRQn) & 0xFUL)-4UL] >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Include/core_sc300.h:  uint32_t vectors = (uint32_t )SCB->VTOR;
+Drivers/CMSIS/Include/core_sc300.h:  uint32_t vectors = (uint32_t )SCB->VTOR;
+Drivers/CMSIS/Include/core_sc300.h:  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+Drivers/CMSIS/Include/core_sc300.h:                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+Drivers/CMSIS/Include/core_armv8mml.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Include/core_armv8mml.h:  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+Drivers/CMSIS/Include/core_armv8mml.h:  SCB->AIRCR =  reg_value;
+Drivers/CMSIS/Include/core_armv8mml.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Include/core_armv8mml.h:  return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+Drivers/CMSIS/Include/core_armv8mml.h:    SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+Drivers/CMSIS/Include/core_armv8mml.h:    return(((uint32_t)SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Include/core_armv8mml.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Include/core_armv8mml.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Include/core_armv8mml.h:  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+Drivers/CMSIS/Include/core_armv8mml.h:                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+Drivers/CMSIS/Include/core_armv8mml.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Include/core_armv8mml.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Include/core_cm35p.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Include/core_cm35p.h:  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+Drivers/CMSIS/Include/core_cm35p.h:  SCB->AIRCR =  reg_value;
+Drivers/CMSIS/Include/core_cm35p.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Include/core_cm35p.h:  return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+Drivers/CMSIS/Include/core_cm35p.h:    SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+Drivers/CMSIS/Include/core_cm35p.h:    return(((uint32_t)SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Include/core_cm35p.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Include/core_cm35p.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Include/core_cm35p.h:  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+Drivers/CMSIS/Include/core_cm35p.h:                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+Drivers/CMSIS/Include/core_cm35p.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Include/core_cm35p.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Include/core_armv81mml.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Include/core_armv81mml.h:  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+Drivers/CMSIS/Include/core_armv81mml.h:  SCB->AIRCR =  reg_value;
+Drivers/CMSIS/Include/core_armv81mml.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Include/core_armv81mml.h:  return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+Drivers/CMSIS/Include/core_armv81mml.h:    SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+Drivers/CMSIS/Include/core_armv81mml.h:    return(((uint32_t)SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Include/core_armv81mml.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Include/core_armv81mml.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Include/core_armv81mml.h:  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+Drivers/CMSIS/Include/core_armv81mml.h:                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+Drivers/CMSIS/Include/core_armv81mml.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Include/core_armv81mml.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Include/core_cm1.h:    SCB->SHP[_SHP_IDX(IRQn)] = ((uint32_t)(SCB->SHP[_SHP_IDX(IRQn)] & ~(0xFFUL << _BIT_SHIFT(IRQn))) |
+Drivers/CMSIS/Include/core_cm1.h:    return((uint32_t)(((SCB->SHP[_SHP_IDX(IRQn)] >> _BIT_SHIFT(IRQn) ) & (uint32_t)0xFFUL) >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Include/core_cm1.h:  SCB->AIRCR  = ((0x5FAUL << SCB_AIRCR_VECTKEY_Pos) |
+Drivers/CMSIS/Include/mpu_armv7.h:  SCB->SHCSR |= SCB_SHCSR_MEMFAULTENA_Msk;
+Drivers/CMSIS/Include/mpu_armv7.h:  SCB->SHCSR &= ~SCB_SHCSR_MEMFAULTENA_Msk;
+Drivers/CMSIS/Include/core_cm0.h:    SCB->SHP[_SHP_IDX(IRQn)] = ((uint32_t)(SCB->SHP[_SHP_IDX(IRQn)] & ~(0xFFUL << _BIT_SHIFT(IRQn))) |
+Drivers/CMSIS/Include/core_cm0.h:    return((uint32_t)(((SCB->SHP[_SHP_IDX(IRQn)] >> _BIT_SHIFT(IRQn) ) & (uint32_t)0xFFUL) >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Include/core_cm0.h:  SCB->AIRCR  = ((0x5FAUL << SCB_AIRCR_VECTKEY_Pos) |
+Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/system_ARMCM4.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/system_ARMCM4.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* set CP10 Full Access */
+Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/system_ARMCM4.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/system_ARMCM7.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/system_ARMCM7.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* set CP10 Full Access */
+Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/system_ARMCM7.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/system_ARMCM33.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/system_ARMCM33.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* set CP10 Full Access */
+Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/system_ARMCM33.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/system_ARMv8MBL.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/system_ARMSC300.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/system_ARMSC300.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/system_ARMv8MML.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/system_ARMv8MML.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* set CP10 Full Access */
+Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/system_ARMv8MML.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/system_ARMCM23.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/DSP_Lib_TestSuite/Common/platform/system_ARMCM3.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_signal_converge_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_signal_converge_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_signal_converge_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_signal_converge_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_signal_converge_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_signal_converge_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_signal_converge_example/RTE/Device/ARMCM3/system_ARMCM3.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_sin_cos_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_sin_cos_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_sin_cos_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_sin_cos_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_sin_cos_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_sin_cos_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_sin_cos_example/RTE/Device/ARMCM3/system_ARMCM3.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_convolution_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_convolution_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_convolution_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_convolution_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_convolution_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_convolution_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_convolution_example/RTE/Device/ARMCM3/system_ARMCM3.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_fft_bin_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_fft_bin_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_fft_bin_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_fft_bin_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_fft_bin_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_fft_bin_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_fft_bin_example/RTE/Device/ARMCM3/system_ARMCM3.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_graphic_equalizer_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_graphic_equalizer_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_graphic_equalizer_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_graphic_equalizer_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_graphic_equalizer_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_graphic_equalizer_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_graphic_equalizer_example/RTE/Device/ARMCM3/system_ARMCM3.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_dotproduct_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_dotproduct_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_dotproduct_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_dotproduct_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_dotproduct_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_dotproduct_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_dotproduct_example/RTE/Device/ARMCM3/system_ARMCM3.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_matrix_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_matrix_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_matrix_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_matrix_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_matrix_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_matrix_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_matrix_example/RTE/Device/ARMCM3/system_ARMCM3.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_fir_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_fir_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_fir_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_fir_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_fir_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_fir_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_fir_example/RTE/Device/ARMCM3/system_ARMCM3.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_class_marks_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_class_marks_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_class_marks_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_class_marks_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_class_marks_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_class_marks_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_class_marks_example/RTE/Device/ARMCM3/system_ARMCM3.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_variance_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_variance_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_variance_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_variance_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_variance_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_variance_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_variance_example/RTE/Device/ARMCM3/system_ARMCM3.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_linear_interp_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_linear_interp_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_linear_interp_example/RTE/Device/ARMCM7_SP/system_ARMCM7.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_linear_interp_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/DSP/Examples/ARM/arm_linear_interp_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CPACR |= ((3U << 10U*2U) |           /* enable CP10 Full Access */
+Drivers/CMSIS/DSP/Examples/ARM/arm_linear_interp_example/RTE/Device/ARMCM4_FP/system_ARMCM4.c:  SCB->CCR |= SCB_CCR_UNALIGN_TRP_Msk;
+Drivers/CMSIS/DSP/Examples/ARM/arm_linear_interp_example/RTE/Device/ARMCM3/system_ARMCM3.c:  SCB->VTOR = (uint32_t) &__Vectors;
+Drivers/CMSIS/RTOS2/Source/os_systick.c:  SCB->SHPR[11] = SYSTICK_IRQ_PRIORITY;
+Drivers/CMSIS/RTOS2/Source/os_systick.c:  SCB->SHPR[1] |= ((uint32_t)SYSTICK_IRQ_PRIORITY << 24);
+Drivers/CMSIS/RTOS2/Source/os_systick.c:  SCB->SHP[11]  = SYSTICK_IRQ_PRIORITY;
+Drivers/CMSIS/RTOS2/Source/os_systick.c:  SCB->SHP[1]  |= ((uint32_t)SYSTICK_IRQ_PRIORITY << 24);
+Drivers/CMSIS/RTOS2/Source/os_systick.c:    SCB->ICSR = SCB_ICSR_PENDSTSET_Msk;
+Drivers/CMSIS/RTOS2/Source/os_systick.c:  if ((SCB->ICSR & SCB_ICSR_PENDSTSET_Msk) != 0U) {
+Drivers/CMSIS/RTOS2/Source/os_systick.c:    SCB->ICSR = SCB_ICSR_PENDSTCLR_Msk;
+Drivers/CMSIS/Core/Include/core_cm33.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Core/Include/core_cm33.h:  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+Drivers/CMSIS/Core/Include/core_cm33.h:  SCB->AIRCR =  reg_value;
+Drivers/CMSIS/Core/Include/core_cm33.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Core/Include/core_cm33.h:  return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+Drivers/CMSIS/Core/Include/core_cm33.h:    SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+Drivers/CMSIS/Core/Include/core_cm33.h:    return(((uint32_t)SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Core/Include/core_cm33.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_cm33.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_cm33.h:  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+Drivers/CMSIS/Core/Include/core_cm33.h:                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+Drivers/CMSIS/Core/Include/core_cm33.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Core/Include/core_cm33.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Core/Include/core_sc000.h:    SCB->SHP[_SHP_IDX(IRQn)] = ((uint32_t)(SCB->SHP[_SHP_IDX(IRQn)] & ~(0xFFUL << _BIT_SHIFT(IRQn))) |
+Drivers/CMSIS/Core/Include/core_sc000.h:    return((uint32_t)(((SCB->SHP[_SHP_IDX(IRQn)] >> _BIT_SHIFT(IRQn) ) & (uint32_t)0xFFUL) >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Core/Include/core_sc000.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_sc000.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_sc000.h:  SCB->AIRCR  = ((0x5FAUL << SCB_AIRCR_VECTKEY_Pos) |
+Drivers/CMSIS/Core/Include/core_cm23.h:    SCB->SHPR[_SHP_IDX(IRQn)] = ((uint32_t)(SCB->SHPR[_SHP_IDX(IRQn)] & ~(0xFFUL << _BIT_SHIFT(IRQn))) |
+Drivers/CMSIS/Core/Include/core_cm23.h:    return((uint32_t)(((SCB->SHPR[_SHP_IDX(IRQn)] >> _BIT_SHIFT(IRQn) ) & (uint32_t)0xFFUL) >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Core/Include/core_cm23.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_cm23.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_cm23.h:  SCB->AIRCR  = ((0x5FAUL << SCB_AIRCR_VECTKEY_Pos) |
+Drivers/CMSIS/Core/Include/core_cm7.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Core/Include/core_cm7.h:  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+Drivers/CMSIS/Core/Include/core_cm7.h:  SCB->AIRCR =  reg_value;
+Drivers/CMSIS/Core/Include/core_cm7.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Core/Include/core_cm7.h:  return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+Drivers/CMSIS/Core/Include/core_cm7.h:    SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+Drivers/CMSIS/Core/Include/core_cm7.h:    return(((uint32_t)SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Core/Include/core_cm7.h:  uint32_t vectors = (uint32_t )SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_cm7.h:  uint32_t vectors = (uint32_t )SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_cm7.h:  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+Drivers/CMSIS/Core/Include/core_cm7.h:                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+Drivers/CMSIS/Core/Include/core_cm7.h:  mvfr0 = SCB->MVFR0;
+Drivers/CMSIS/Core/Include/core_cm7.h:    if (SCB->CCR & SCB_CCR_IC_Msk) return;  /* return if ICache is already enabled */
+Drivers/CMSIS/Core/Include/core_cm7.h:    SCB->ICIALLU = 0UL;                     /* invalidate I-Cache */
+Drivers/CMSIS/Core/Include/core_cm7.h:    SCB->CCR |=  (uint32_t)SCB_CCR_IC_Msk;  /* enable I-Cache */
+Drivers/CMSIS/Core/Include/core_cm7.h:    SCB->CCR &= ~(uint32_t)SCB_CCR_IC_Msk;  /* disable I-Cache */
+Drivers/CMSIS/Core/Include/core_cm7.h:    SCB->ICIALLU = 0UL;                     /* invalidate I-Cache */
+Drivers/CMSIS/Core/Include/core_cm7.h:    SCB->ICIALLU = 0UL;
+Drivers/CMSIS/Core/Include/core_cm7.h:        SCB->ICIMVAU = op_addr;             /* register accepts only 32byte aligned values, only bits 31..5 are valid */
+Drivers/CMSIS/Core/Include/core_cm7.h:    if (SCB->CCR & SCB_CCR_DC_Msk) return;  /* return if DCache is already enabled */
+Drivers/CMSIS/Core/Include/core_cm7.h:    SCB->CSSELR = 0U;                       /* select Level 1 data cache */
+Drivers/CMSIS/Core/Include/core_cm7.h:    ccsidr = SCB->CCSIDR;
+Drivers/CMSIS/Core/Include/core_cm7.h:        SCB->DCISW = (((sets << SCB_DCISW_SET_Pos) & SCB_DCISW_SET_Msk) |
+Drivers/CMSIS/Core/Include/core_cm7.h:    SCB->CCR |=  (uint32_t)SCB_CCR_DC_Msk;  /* enable D-Cache */
+Drivers/CMSIS/Core/Include/core_cm7.h:    SCB->CSSELR = 0U;                       /* select Level 1 data cache */
+Drivers/CMSIS/Core/Include/core_cm7.h:    SCB->CCR &= ~(uint32_t)SCB_CCR_DC_Msk;  /* disable D-Cache */
+Drivers/CMSIS/Core/Include/core_cm7.h:    ccsidr = SCB->CCSIDR;
+Drivers/CMSIS/Core/Include/core_cm7.h:        SCB->DCCISW = (((sets << SCB_DCCISW_SET_Pos) & SCB_DCCISW_SET_Msk) |
+Drivers/CMSIS/Core/Include/core_cm7.h:    SCB->CSSELR = 0U;                       /* select Level 1 data cache */
+Drivers/CMSIS/Core/Include/core_cm7.h:    ccsidr = SCB->CCSIDR;
+Drivers/CMSIS/Core/Include/core_cm7.h:        SCB->DCISW = (((sets << SCB_DCISW_SET_Pos) & SCB_DCISW_SET_Msk) |
+Drivers/CMSIS/Core/Include/core_cm7.h:    SCB->CSSELR = 0U;                       /* select Level 1 data cache */
+Drivers/CMSIS/Core/Include/core_cm7.h:    ccsidr = SCB->CCSIDR;
+Drivers/CMSIS/Core/Include/core_cm7.h:        SCB->DCCSW = (((sets << SCB_DCCSW_SET_Pos) & SCB_DCCSW_SET_Msk) |
+Drivers/CMSIS/Core/Include/core_cm7.h:    SCB->CSSELR = 0U;                       /* select Level 1 data cache */
+Drivers/CMSIS/Core/Include/core_cm7.h:    ccsidr = SCB->CCSIDR;
+Drivers/CMSIS/Core/Include/core_cm7.h:        SCB->DCCISW = (((sets << SCB_DCCISW_SET_Pos) & SCB_DCCISW_SET_Msk) |
+Drivers/CMSIS/Core/Include/core_cm7.h:        SCB->DCIMVAC = op_addr;             /* register accepts only 32byte aligned values, only bits 31..5 are valid */
+Drivers/CMSIS/Core/Include/core_cm7.h:        SCB->DCCMVAC = op_addr;             /* register accepts only 32byte aligned values, only bits 31..5 are valid */
+Drivers/CMSIS/Core/Include/core_cm7.h:        SCB->DCCIMVAC = op_addr;            /* register accepts only 32byte aligned values, only bits 31..5 are valid */
+Drivers/CMSIS/Core/Include/core_armv8mbl.h:    SCB->SHPR[_SHP_IDX(IRQn)] = ((uint32_t)(SCB->SHPR[_SHP_IDX(IRQn)] & ~(0xFFUL << _BIT_SHIFT(IRQn))) |
+Drivers/CMSIS/Core/Include/core_armv8mbl.h:    return((uint32_t)(((SCB->SHPR[_SHP_IDX(IRQn)] >> _BIT_SHIFT(IRQn) ) & (uint32_t)0xFFUL) >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Core/Include/core_armv8mbl.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_armv8mbl.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_armv8mbl.h:  SCB->AIRCR  = ((0x5FAUL << SCB_AIRCR_VECTKEY_Pos) |
+Drivers/CMSIS/Core/Include/mpu_armv8.h:  SCB->SHCSR |= SCB_SHCSR_MEMFAULTENA_Msk;
+Drivers/CMSIS/Core/Include/mpu_armv8.h:  SCB->SHCSR &= ~SCB_SHCSR_MEMFAULTENA_Msk;
+Drivers/CMSIS/Core/Include/core_cm4.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Core/Include/core_cm4.h:  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+Drivers/CMSIS/Core/Include/core_cm4.h:  SCB->AIRCR =  reg_value;
+Drivers/CMSIS/Core/Include/core_cm4.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Core/Include/core_cm4.h:  return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+Drivers/CMSIS/Core/Include/core_cm4.h:    SCB->SHP[(((uint32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+Drivers/CMSIS/Core/Include/core_cm4.h:    return(((uint32_t)SCB->SHP[(((uint32_t)IRQn) & 0xFUL)-4UL] >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Core/Include/core_cm4.h:  uint32_t vectors = (uint32_t )SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_cm4.h:  uint32_t vectors = (uint32_t )SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_cm4.h:  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+Drivers/CMSIS/Core/Include/core_cm4.h:                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+Drivers/CMSIS/Core/Include/core_cm3.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Core/Include/core_cm3.h:  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+Drivers/CMSIS/Core/Include/core_cm3.h:  SCB->AIRCR =  reg_value;
+Drivers/CMSIS/Core/Include/core_cm3.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Core/Include/core_cm3.h:  return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+Drivers/CMSIS/Core/Include/core_cm3.h:    SCB->SHP[(((uint32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+Drivers/CMSIS/Core/Include/core_cm3.h:    return(((uint32_t)SCB->SHP[(((uint32_t)IRQn) & 0xFUL)-4UL] >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Core/Include/core_cm3.h:  uint32_t vectors = (uint32_t )SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_cm3.h:  uint32_t vectors = (uint32_t )SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_cm3.h:  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+Drivers/CMSIS/Core/Include/core_cm3.h:                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+Drivers/CMSIS/Core/Include/core_cm0plus.h:    SCB->SHP[_SHP_IDX(IRQn)] = ((uint32_t)(SCB->SHP[_SHP_IDX(IRQn)] & ~(0xFFUL << _BIT_SHIFT(IRQn))) |
+Drivers/CMSIS/Core/Include/core_cm0plus.h:    return((uint32_t)(((SCB->SHP[_SHP_IDX(IRQn)] >> _BIT_SHIFT(IRQn) ) & (uint32_t)0xFFUL) >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Core/Include/core_cm0plus.h:  uint32_t vectors = SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_cm0plus.h:  uint32_t vectors = SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_cm0plus.h:  SCB->AIRCR  = ((0x5FAUL << SCB_AIRCR_VECTKEY_Pos) |
+Drivers/CMSIS/Core/Include/core_sc300.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Core/Include/core_sc300.h:  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+Drivers/CMSIS/Core/Include/core_sc300.h:  SCB->AIRCR =  reg_value;
+Drivers/CMSIS/Core/Include/core_sc300.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Core/Include/core_sc300.h:  return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+Drivers/CMSIS/Core/Include/core_sc300.h:    SCB->SHP[(((uint32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+Drivers/CMSIS/Core/Include/core_sc300.h:    return(((uint32_t)SCB->SHP[(((uint32_t)IRQn) & 0xFUL)-4UL] >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Core/Include/core_sc300.h:  uint32_t vectors = (uint32_t )SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_sc300.h:  uint32_t vectors = (uint32_t )SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_sc300.h:  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+Drivers/CMSIS/Core/Include/core_sc300.h:                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+Drivers/CMSIS/Core/Include/core_armv8mml.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Core/Include/core_armv8mml.h:  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+Drivers/CMSIS/Core/Include/core_armv8mml.h:  SCB->AIRCR =  reg_value;
+Drivers/CMSIS/Core/Include/core_armv8mml.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Core/Include/core_armv8mml.h:  return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+Drivers/CMSIS/Core/Include/core_armv8mml.h:    SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+Drivers/CMSIS/Core/Include/core_armv8mml.h:    return(((uint32_t)SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Core/Include/core_armv8mml.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_armv8mml.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_armv8mml.h:  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+Drivers/CMSIS/Core/Include/core_armv8mml.h:                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+Drivers/CMSIS/Core/Include/core_armv8mml.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Core/Include/core_armv8mml.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Core/Include/core_cm35p.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Core/Include/core_cm35p.h:  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+Drivers/CMSIS/Core/Include/core_cm35p.h:  SCB->AIRCR =  reg_value;
+Drivers/CMSIS/Core/Include/core_cm35p.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Core/Include/core_cm35p.h:  return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+Drivers/CMSIS/Core/Include/core_cm35p.h:    SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+Drivers/CMSIS/Core/Include/core_cm35p.h:    return(((uint32_t)SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Core/Include/core_cm35p.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_cm35p.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_cm35p.h:  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+Drivers/CMSIS/Core/Include/core_cm35p.h:                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+Drivers/CMSIS/Core/Include/core_cm35p.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Core/Include/core_cm35p.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Core/Include/core_armv81mml.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Core/Include/core_armv81mml.h:  reg_value  =  SCB->AIRCR;                                                   /* read old register configuration    */
+Drivers/CMSIS/Core/Include/core_armv81mml.h:  SCB->AIRCR =  reg_value;
+Drivers/CMSIS/Core/Include/core_armv81mml.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Core/Include/core_armv81mml.h:  return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+Drivers/CMSIS/Core/Include/core_armv81mml.h:    SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (uint32_t)0xFFUL);
+Drivers/CMSIS/Core/Include/core_armv81mml.h:    return(((uint32_t)SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Core/Include/core_armv81mml.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_armv81mml.h:  uint32_t *vectors = (uint32_t *)SCB->VTOR;
+Drivers/CMSIS/Core/Include/core_armv81mml.h:  SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+Drivers/CMSIS/Core/Include/core_armv81mml.h:                           (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+Drivers/CMSIS/Core/Include/core_armv81mml.h:           The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+Drivers/CMSIS/Core/Include/core_armv81mml.h:  \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+Drivers/CMSIS/Core/Include/core_cm1.h:    SCB->SHP[_SHP_IDX(IRQn)] = ((uint32_t)(SCB->SHP[_SHP_IDX(IRQn)] & ~(0xFFUL << _BIT_SHIFT(IRQn))) |
+Drivers/CMSIS/Core/Include/core_cm1.h:    return((uint32_t)(((SCB->SHP[_SHP_IDX(IRQn)] >> _BIT_SHIFT(IRQn) ) & (uint32_t)0xFFUL) >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Core/Include/core_cm1.h:  SCB->AIRCR  = ((0x5FAUL << SCB_AIRCR_VECTKEY_Pos) |
+Drivers/CMSIS/Core/Include/mpu_armv7.h:  SCB->SHCSR |= SCB_SHCSR_MEMFAULTENA_Msk;
+Drivers/CMSIS/Core/Include/mpu_armv7.h:  SCB->SHCSR &= ~SCB_SHCSR_MEMFAULTENA_Msk;
+Drivers/CMSIS/Core/Include/core_cm0.h:    SCB->SHP[_SHP_IDX(IRQn)] = ((uint32_t)(SCB->SHP[_SHP_IDX(IRQn)] & ~(0xFFUL << _BIT_SHIFT(IRQn))) |
+Drivers/CMSIS/Core/Include/core_cm0.h:    return((uint32_t)(((SCB->SHP[_SHP_IDX(IRQn)] >> _BIT_SHIFT(IRQn) ) & (uint32_t)0xFFUL) >> (8U - __NVIC_PRIO_BITS)));
+Drivers/CMSIS/Core/Include/core_cm0.h:  SCB->AIRCR  = ((0x5FAUL << SCB_AIRCR_VECTKEY_Pos) |
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h:#define __HAL_HSEM_ENABLE_IT(__SEM_MASK__) ((((SCB->CPUID & 0x000000F0) >> 4 )== 0x7) ? \
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h:#define __HAL_HSEM_DISABLE_IT(__SEM_MASK__) ((((SCB->CPUID & 0x000000F0) >> 4 )== 0x7) ? \
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h:#define __HAL_HSEM_GET_IT(__SEM_MASK__) ((((SCB->CPUID & 0x000000F0) >> 4 )== 0x7) ? \
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h:#define __HAL_HSEM_GET_FLAG(__SEM_MASK__) ((((SCB->CPUID & 0x000000F0) >> 4 )== 0x7) ? \
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h:#define __HAL_HSEM_CLEAR_FLAG(__SEM_MASK__) ((((SCB->CPUID & 0x000000F0) >> 4 )== 0x7) ? \
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_cortex.h:  CLEAR_BIT(SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_cortex.h:  SET_BIT(SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_cortex.h:  SET_BIT(SCB->SCR, SCB_SCR_SLEEPONEXIT_Msk);
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_cortex.h:  CLEAR_BIT(SCB->SCR, SCB_SCR_SLEEPONEXIT_Msk);
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_cortex.h:  SET_BIT(SCB->SCR, SCB_SCR_SEVONPEND_Msk);
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_cortex.h:  CLEAR_BIT(SCB->SCR, SCB_SCR_SEVONPEND_Msk);
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_cortex.h:  SET_BIT(SCB->SHCSR, Fault);
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_cortex.h:  CLEAR_BIT(SCB->SHCSR, Fault);
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_cortex.h:  return (uint32_t)(READ_BIT(SCB->CPUID, SCB_CPUID_IMPLEMENTER_Msk) >> SCB_CPUID_IMPLEMENTER_Pos);
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_cortex.h:  return (uint32_t)(READ_BIT(SCB->CPUID, SCB_CPUID_VARIANT_Msk) >> SCB_CPUID_VARIANT_Pos);
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_cortex.h:  return (uint32_t)(READ_BIT(SCB->CPUID, SCB_CPUID_ARCHITECTURE_Msk) >> SCB_CPUID_ARCHITECTURE_Pos);
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_cortex.h:  return (uint32_t)(READ_BIT(SCB->CPUID, SCB_CPUID_PARTNO_Msk) >> SCB_CPUID_PARTNO_Pos);
+Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_cortex.h:  return (uint32_t)(READ_BIT(SCB->CPUID, SCB_CPUID_REVISION_Msk) >> SCB_CPUID_REVISION_Pos);
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c:  CLEAR_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c:  SET_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c:  CLEAR_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c:  SET_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c:  SET_BIT (SCB->SCR, SCB_SCR_SLEEPONEXIT_Msk);
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c:  CLEAR_BIT (SCB->SCR, SCB_SCR_SLEEPONEXIT_Msk);
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c:  SET_BIT (SCB->SCR, SCB_SCR_SEVONPEND_Msk);
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c:  CLEAR_BIT (SCB->SCR, SCB_SCR_SEVONPEND_Msk);
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c:  SCB->SHCSR &= ~SCB_SHCSR_MEMFAULTENA_Msk;
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c:  SCB->SHCSR |= SCB_SHCSR_MEMFAULTENA_Msk;
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c:  * @retval Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field)
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c:  if (((SCB->CPUID & 0x000000F0U) >> 4 )== 0x7U)
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c:  SET_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c:  CLEAR_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c:    SET_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c:    CLEAR_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c:    SET_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c:    CLEAR_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c:    SET_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c:    SET_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+USB_DEVICE/Target/usbd_conf.c:    SCB->SCR |= (uint32_t)((uint32_t)(SCB_SCR_SLEEPDEEP_Msk | SCB_SCR_SLEEPONEXIT_Msk));
+Core/Src/system_stm32h7xx.c:    SCB->CPACR |= ((3UL << (10*2))|(3UL << (11*2)));  /* set CP10 and CP11 Full Access */
+Core/Src/system_stm32h7xx.c:  SCB->VTOR = VECT_TAB_BASE_ADDRESS | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal D2 AXI-RAM or in Internal FLASH */
+Core/Src/system_stm32h7xx.c:  SCB->VTOR = VECT_TAB_BASE_ADDRESS | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal D1 AXI-RAM or in Internal FLASH */
+build/usbd_conf.lst: 263:USB_DEVICE/Target/usbd_conf.c ****     SCB->SCR |= (uint32_t)((uint32_t)(SCB_SCR_SLEEPDEEP_Msk | SCB_SCR_SLEEPONEXIT_Msk));
+build/stm32h7xx_hal_pwr.lst: 571:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c ****   CLEAR_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+build/stm32h7xx_hal_pwr.lst: 648:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c ****   SET_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+build/stm32h7xx_hal_pwr.lst: 667:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c ****   CLEAR_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+build/stm32h7xx_hal_pwr.lst: 714:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c ****   SET_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+build/stm32h7xx_hal_pwr.lst: 741:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c ****   SET_BIT (SCB->SCR, SCB_SCR_SLEEPONEXIT_Msk);
+build/stm32h7xx_hal_pwr.lst: 754:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c ****   CLEAR_BIT (SCB->SCR, SCB_SCR_SLEEPONEXIT_Msk);
+build/stm32h7xx_hal_pwr.lst: 767:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c ****   SET_BIT (SCB->SCR, SCB_SCR_SEVONPEND_Msk);
+build/stm32h7xx_hal_pwr.lst: 779:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c ****   CLEAR_BIT (SCB->SCR, SCB_SCR_SEVONPEND_Msk);
+build/system_stm32h7xx.lst: 183:Core/Src/system_stm32h7xx.c ****     SCB->CPACR |= ((3UL << (10*2))|(3UL << (11*2)));  /* set CP10 and CP11 Full Access */
+build/system_stm32h7xx.lst: 284:Core/Src/system_stm32h7xx.c ****   SCB->VTOR = VECT_TAB_BASE_ADDRESS | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal D2 AX
+build/system_stm32h7xx.lst: 297:Core/Src/system_stm32h7xx.c ****   SCB->VTOR = VECT_TAB_BASE_ADDRESS | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal D1 AX
+build/stm32h7xx_hal_pwr_ex.lst: 755:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c ****   SET_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+build/stm32h7xx_hal_pwr_ex.lst: 774:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c ****   CLEAR_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+build/stm32h7xx_hal_pwr_ex.lst: 845:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c ****     SET_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+build/stm32h7xx_hal_pwr_ex.lst: 864:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c ****     CLEAR_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+build/stm32h7xx_hal_pwr_ex.lst: 884:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c ****     SET_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+build/stm32h7xx_hal_pwr_ex.lst: 903:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c ****     CLEAR_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+build/stm32h7xx_hal_pwr_ex.lst:1015:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c ****     SET_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+build/stm32h7xx_hal_pwr_ex.lst:1046:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c ****     SET_BIT (SCB->SCR, SCB_SCR_SLEEPDEEP_Msk);
+build/stm32h7xx_hal_cortex.lst:1865:Drivers/CMSIS/Include/core_cm7.h ****            The parameter PriorityGroup is assigned to the field SCB->AIRCR [10:8] PRIGROUP field.
+build/stm32h7xx_hal_cortex.lst:1876:Drivers/CMSIS/Include/core_cm7.h ****   reg_value  =  SCB->AIRCR;                                                   /* read old register 
+build/stm32h7xx_hal_cortex.lst:1881:Drivers/CMSIS/Include/core_cm7.h ****   SCB->AIRCR =  reg_value;
+build/stm32h7xx_hal_cortex.lst:1888:Drivers/CMSIS/Include/core_cm7.h ****   \return                Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field).
+build/stm32h7xx_hal_cortex.lst:1892:Drivers/CMSIS/Include/core_cm7.h ****   return ((uint32_t)((SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) >> SCB_AIRCR_PRIGROUP_Pos));
+build/stm32h7xx_hal_cortex.lst:2040:Drivers/CMSIS/Include/core_cm7.h ****     SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] = (uint8_t)((priority << (8U - __NVIC_PRIO_BITS)) & (
+build/stm32h7xx_hal_cortex.lst:2063:Drivers/CMSIS/Include/core_cm7.h ****     return(((uint32_t)SCB->SHPR[(((uint32_t)IRQn) & 0xFUL)-4UL] >> (8U - __NVIC_PRIO_BITS)));
+build/stm32h7xx_hal_cortex.lst:2131:Drivers/CMSIS/Include/core_cm7.h ****   uint32_t vectors = (uint32_t )SCB->VTOR;
+build/stm32h7xx_hal_cortex.lst:2147:Drivers/CMSIS/Include/core_cm7.h ****   uint32_t vectors = (uint32_t )SCB->VTOR;
+build/stm32h7xx_hal_cortex.lst:2160:Drivers/CMSIS/Include/core_cm7.h ****   SCB->AIRCR  = (uint32_t)((0x5FAUL << SCB_AIRCR_VECTKEY_Pos)    |
+build/stm32h7xx_hal_cortex.lst:2161:Drivers/CMSIS/Include/core_cm7.h ****                            (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+build/stm32h7xx_hal_cortex.lst:2160:Drivers/CMSIS/Include/core_cm7.h ****                            (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+build/stm32h7xx_hal_cortex.lst:2160:Drivers/CMSIS/Include/core_cm7.h ****                            (SCB->AIRCR & SCB_AIRCR_PRIGROUP_Msk) |
+build/stm32h7xx_hal_cortex.lst:1880:Drivers/CMSIS/Include/core_cm7.h ****   SCB->AIRCR =  reg_value;
+build/stm32h7xx_hal_cortex.lst:1880:Drivers/CMSIS/Include/core_cm7.h ****   SCB->AIRCR =  reg_value;
+build/stm32h7xx_hal_cortex.lst:2203:Drivers/CMSIS/Include/core_cm7.h ****   mvfr0 = SCB->MVFR0;
+build/stm32h7xx_hal_cortex.lst:2244:Drivers/CMSIS/Include/core_cm7.h ****     if (SCB->CCR & SCB_CCR_IC_Msk) return;  /* return if ICache is already enabled */
+build/stm32h7xx_hal_cortex.lst:2248:Drivers/CMSIS/Include/core_cm7.h ****     SCB->ICIALLU = 0UL;                     /* invalidate I-Cache */
+build/stm32h7xx_hal_cortex.lst:2251:Drivers/CMSIS/Include/core_cm7.h ****     SCB->CCR |=  (uint32_t)SCB_CCR_IC_Msk;  /* enable I-Cache */
+build/stm32h7xx_hal_cortex.lst:2267:Drivers/CMSIS/Include/core_cm7.h ****     SCB->CCR &= ~(uint32_t)SCB_CCR_IC_Msk;  /* disable I-Cache */
+build/stm32h7xx_hal_cortex.lst:2268:Drivers/CMSIS/Include/core_cm7.h ****     SCB->ICIALLU = 0UL;                     /* invalidate I-Cache */
+build/stm32h7xx_hal_cortex.lst:2284:Drivers/CMSIS/Include/core_cm7.h ****     SCB->ICIALLU = 0UL;
+build/stm32h7xx_hal_cortex.lst:2309:Drivers/CMSIS/Include/core_cm7.h ****         SCB->ICIMVAU = op_addr;             /* register accepts only 32byte aligned values, only bi
+build/stm32h7xx_hal_cortex.lst:2332:Drivers/CMSIS/Include/core_cm7.h ****     if (SCB->CCR & SCB_CCR_DC_Msk) return;  /* return if DCache is already enabled */
+build/stm32h7xx_hal_cortex.lst:2334:Drivers/CMSIS/Include/core_cm7.h ****     SCB->CSSELR = 0U;                       /* select Level 1 data cache */
+build/stm32h7xx_hal_cortex.lst:2337:Drivers/CMSIS/Include/core_cm7.h ****     ccsidr = SCB->CCSIDR;
+build/stm32h7xx_hal_cortex.lst:2344:Drivers/CMSIS/Include/core_cm7.h ****         SCB->DCISW = (((sets << SCB_DCISW_SET_Pos) & SCB_DCISW_SET_Msk) |
+build/stm32h7xx_hal_cortex.lst:2353:Drivers/CMSIS/Include/core_cm7.h ****     SCB->CCR |=  (uint32_t)SCB_CCR_DC_Msk;  /* enable D-Cache */
+build/stm32h7xx_hal_cortex.lst:2372:Drivers/CMSIS/Include/core_cm7.h ****     SCB->CSSELR = 0U;                       /* select Level 1 data cache */
+build/stm32h7xx_hal_cortex.lst:2375:Drivers/CMSIS/Include/core_cm7.h ****     SCB->CCR &= ~(uint32_t)SCB_CCR_DC_Msk;  /* disable D-Cache */
+build/stm32h7xx_hal_cortex.lst:2378:Drivers/CMSIS/Include/core_cm7.h ****     ccsidr = SCB->CCSIDR;
+build/stm32h7xx_hal_cortex.lst:2385:Drivers/CMSIS/Include/core_cm7.h ****         SCB->DCCISW = (((sets << SCB_DCCISW_SET_Pos) & SCB_DCCISW_SET_Msk) |
+build/stm32h7xx_hal_cortex.lst:2410:Drivers/CMSIS/Include/core_cm7.h ****     SCB->CSSELR = 0U;                       /* select Level 1 data cache */
+build/stm32h7xx_hal_cortex.lst:2413:Drivers/CMSIS/Include/core_cm7.h ****     ccsidr = SCB->CCSIDR;
+build/stm32h7xx_hal_cortex.lst:2420:Drivers/CMSIS/Include/core_cm7.h ****         SCB->DCISW = (((sets << SCB_DCISW_SET_Pos) & SCB_DCISW_SET_Msk) |
+build/stm32h7xx_hal_cortex.lst:2445:Drivers/CMSIS/Include/core_cm7.h ****     SCB->CSSELR = 0U;                       /* select Level 1 data cache */
+build/stm32h7xx_hal_cortex.lst:2448:Drivers/CMSIS/Include/core_cm7.h ****     ccsidr = SCB->CCSIDR;
+build/stm32h7xx_hal_cortex.lst:2455:Drivers/CMSIS/Include/core_cm7.h ****         SCB->DCCSW = (((sets << SCB_DCCSW_SET_Pos) & SCB_DCCSW_SET_Msk) |
+build/stm32h7xx_hal_cortex.lst:2480:Drivers/CMSIS/Include/core_cm7.h ****     SCB->CSSELR = 0U;                       /* select Level 1 data cache */
+build/stm32h7xx_hal_cortex.lst:2483:Drivers/CMSIS/Include/core_cm7.h ****     ccsidr = SCB->CCSIDR;
+build/stm32h7xx_hal_cortex.lst:2490:Drivers/CMSIS/Include/core_cm7.h ****         SCB->DCCISW = (((sets << SCB_DCCISW_SET_Pos) & SCB_DCCISW_SET_Msk) |
+build/stm32h7xx_hal_cortex.lst:2522:Drivers/CMSIS/Include/core_cm7.h ****         SCB->DCIMVAC = op_addr;             /* register accepts only 32byte aligned values, only bi
+build/stm32h7xx_hal_cortex.lst:2552:Drivers/CMSIS/Include/core_cm7.h ****         SCB->DCCMVAC = op_addr;             /* register accepts only 32byte aligned values, only bi
+build/stm32h7xx_hal_cortex.lst:2582:Drivers/CMSIS/Include/core_cm7.h ****         SCB->DCCIMVAC = op_addr;            /* register accepts only 32byte aligned values, only bi
+build/stm32h7xx_hal_cortex.lst: 262:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c ****   SCB->SHCSR &= ~SCB_SHCSR_MEMFAULTENA_Msk;
+build/stm32h7xx_hal_cortex.lst: 285:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c ****   SCB->SHCSR |= SCB_SHCSR_MEMFAULTENA_Msk;
+build/stm32h7xx_hal_cortex.lst: 339:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c ****   * @retval Priority grouping field (SCB->AIRCR [10:8] PRIGROUP field)
+build/stm32h7xx_hal_cortex.lst: 493:Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c ****   if (((SCB->CPUID & 0x000000F0U) >> 4 )== 0x7U)
