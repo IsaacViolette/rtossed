@@ -19,7 +19,9 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "process.h"
 #include "stm32h7xx_it.h"
+#include <stdio.h>
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 /* USER CODE END Includes */
@@ -174,12 +176,7 @@ void DebugMon_Handler(void)
   */
 void PendSV_Handler(void)
 {
-  /* USER CODE BEGIN PendSV_IRQn 0 */
-
-  /* USER CODE END PendSV_IRQn 0 */
-  /* USER CODE BEGIN PendSV_IRQn 1 */
-
-  /* USER CODE END PendSV_IRQn 1 */
+	printf("In PendSV_Handler");
 }
 
 /**
@@ -187,10 +184,11 @@ void PendSV_Handler(void)
   */
 void SysTick_Handler(void)
 {
-  //HAL_IncTick();
-  uwTick++;
-  if(((uwTick % 32) == 0) && (kready == 1)) 
-	  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_0);
+	uwTick++;
+	if(((uwTick % 32) == 0) && (kready == 1)) { 
+		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_0);
+		yield();
+	}
 }
 
 /******************************************************************************/

@@ -9,8 +9,8 @@
 static inline void yield(void)
 {
 	SCB->ICSR |= SCB_ICSR_PENDSVSET_Msk;
-	_DSB();
-	_ISB();
+	__DSB();
+	__ISB();
 }
 
 
