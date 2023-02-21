@@ -176,7 +176,7 @@ void DebugMon_Handler(void)
   */
 void PendSV_Handler(void)
 {
-	printf("In PendSV_Handler");
+	printf("In PendSV_Handler\n");
 }
 
 /**
