@@ -28,9 +28,10 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32h7xx_hal.h"
+#include <stdint.h>
 
 /*Indicates that the system is initialized and userspace process may start*/
-extern int kready;
+extern uint32_t kready;
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 

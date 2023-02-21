@@ -36,7 +36,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-int kready = 0;
+uint32_t kready = 0;
 
 /* USER CODE END Includes */
 
