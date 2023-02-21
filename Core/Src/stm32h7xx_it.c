@@ -189,10 +189,8 @@ void SysTick_Handler(void)
 {
   //HAL_IncTick();
   uwTick++;
-  if((uwTick == 32) && (kready == 1)) {
+  if(((uwTick % 32) == 0) && (kready == 1)) 
 	  HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_0);
-	  uwTick = 0;
-  }
 }
 
 /******************************************************************************/
