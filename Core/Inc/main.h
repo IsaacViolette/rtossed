@@ -59,6 +59,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define SysTick_LED_Pin GPIO_PIN_0
+#define SysTick_LED_GPIO_Port GPIOC
 #define B1_Pin GPIO_PIN_13
 #define B1_GPIO_Port GPIOC
 #define OSC32_IN_Pin GPIO_PIN_14
@@ -77,8 +79,6 @@ void Error_Handler(void);
 #define LD1_GPIO_Port GPIOB
 #define IDLE_LED_Pin GPIO_PIN_1
 #define IDLE_LED_GPIO_Port GPIOB
-#define SysTick_LED_Pin GPIO_PIN_2
-#define SysTick_LED_GPIO_Port GPIOB
 #define LCD_RST_Pin GPIO_PIN_12
 #define LCD_RST_GPIO_Port GPIOB
 #define LCD_D_C_Pin GPIO_PIN_13
