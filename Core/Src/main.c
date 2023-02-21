@@ -30,6 +30,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <progs.h>
+#include <process.h>
 #include <sh.h>
 
 /* Private includes ----------------------------------------------------------*/
@@ -123,7 +124,6 @@ int main(void)
 	kready = 1;
 	while (1) {
 		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_1);
-		//HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_0);
 		HAL_Delay(100);
 	}
 }

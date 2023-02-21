@@ -13,5 +13,14 @@ static inline void yield(void)
 	__ISB();
 }
 
+struct task_struct {
+	//state
+	int pid;
+	int exc_return;
+	int sp_start;
+
+
+}
+
 
 #endif /*__PROCESS_H*/
