@@ -1,9 +1,10 @@
+/*Define to prevent recursive inclusion*/
+#ifndef PROGS_H
+#define PROGS_H
+
 /*Includes*/
 #include "stm32h7xx_hal.h"
 
-/*Define to prevent recursive inclusion*/
-#ifndef __PROGS_H
-#define __PROGS_H
 
 void process1(void);
 
