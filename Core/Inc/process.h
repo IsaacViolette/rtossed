@@ -63,6 +63,25 @@ struct __attribute__ ((__packed__)) task_struct {
 
 };
 
+void reg_push(void)
+{
+	__asm__ __voltaile__(
+		"PUSH {r4-r11}"
+	);
+}
 
+void restore_reg(void)
+{
+i	__asm__ __volatile__(
+		"LDM {}"
+		:
+		:
+	);
+}
+
+void context_return(void)
+{
+
+}
 
 #endif /*__PROCESS_H*/
