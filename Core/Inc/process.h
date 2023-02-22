@@ -5,8 +5,8 @@
 /*Includes*/
 #include "stm32h7xx_hal.h"
 #include "main.h"
-#include <stdint.h>
-#include <unistd.h>
+#include <stdint.h> 
+#include <unistd.h> //for pid type
 
 /*Defines*/
 #define STATE_UNUSED 0
