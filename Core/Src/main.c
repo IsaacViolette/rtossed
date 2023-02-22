@@ -75,7 +75,6 @@ int main(void)
 	extern const uint32_t _eustack[];
 	__set_PSP((uint32_t)_eustack);
 
-	/* USER CODE BEGIN WHILE */
 	kready = 1;
 	while (1) {
 		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_1);
