@@ -16,6 +16,7 @@
   ******************************************************************************
   */
 /* USER CODE END Header */
+
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "dma.h"
@@ -33,65 +34,18 @@
 #include <process.h>
 #include <sh.h>
 
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
-
 uint32_t kready = 0;
 
-/* USER CODE END Includes */
-
-/* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN PTD */
-
-/* USER CODE END PTD */
-
-/* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
-/* USER CODE END PD */
-
-/* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
-
-/* USER CODE END PM */
-
-/* Private variables ---------------------------------------------------------*/
-
-/* USER CODE BEGIN PV */
-
-/* USER CODE END PV */
-
-/* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-/* USER CODE BEGIN PFP */
-
-/* USER CODE END PFP */
-
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
-
-/* USER CODE END 0 */
 
 int main(void)
 {
-	/* USER CODE BEGIN 1 */
-
-	/* USER CODE END 1 */
-
-	/* MCU Configuration--------------------------------------------------------*/
 
 	/* Reset of all peripherals, Initializes the Flash interface and the Systick. */
 	HAL_Init();
 
-	/* USER CODE BEGIN Init */
-
-	/* USER CODE END Init */
-
 	/* Configure the system clock */
 	SystemClock_Config();
-
-	/* USER CODE BEGIN SysInit */
-
-	/* USER CODE END SysInit */
 
 	/* Initialize all configured peripherals */
 	MX_GPIO_Init();
@@ -100,9 +54,7 @@ int main(void)
 	MX_SPI1_Init();
 	MX_USART3_UART_Init();
 	MX_USB_DEVICE_Init();
-	/* USER CODE BEGIN 2 */
 
-	/* USER CODE END 2 */
 	//String used to print onto display
 	char buf[] = "ECE331";
 	
@@ -118,7 +70,10 @@ int main(void)
 	graphics_drawText(buf,1,1);
 	setvbuf(stdout, NULL, _IONBF, 0);
 	HAL_Delay(2500);
-
+	
+	/*User Space Stack Pointer Initialization*/
+	extern const uint32_t _eustack[];
+	__set_PSP(_eustack);
 
 	/* USER CODE BEGIN WHILE */
 	kready = 1;
