@@ -40,7 +40,7 @@ void process_stack_init(struct task_struct *init)
 	*((uint32_t*)init->r.SP-24) = init->r.r1;
 	*((uint32_t*)init->r.SP-25) = init->r.r0;
 
-	/*Save the updated SP varaible back to the SP that was passed*/
-	*((uint32_t*)init->r.SP-25) = init->r.SP;
+	/*Save the updated SP variable back to the SP that was passed*/
+	init->r.SP = *((uint32_t*)init->r.SP-26);
 	
 }
