@@ -6,6 +6,9 @@
 /*Defines*/
 #define PROC_MAX 4
 
+/*Prototypes*/
+void proc_start(void);
+
 /*Global Variables*/
 /*Init the entire array of structures to zero*/
 struct task_struct process_table[PROC_MAX];
@@ -55,13 +58,13 @@ void proc_table_init(void)
 	process_table[0].r.SP = (uint32_t) _eustack;
 	process_table[0].sp_start = (uint32_t) _eustack;
 	process_table[0].r.LR = 0;	
-	process_table[0].r.PC = process_start;
+	process_table[0].r.PC = (uint32_t) proc_start;
 	process_table[0].r.PSR = 0x01000000;
 	process_table[0].state = STATE_RUN;
-	process_table[0].cmd = (uint32_t*) &sh; 
+	process_table[0].cmd = sh; 
 	process_table[0].exc_return = EXC_RETURN_THREAD_PSP;	
 	process_table[0].pid = 0;
-	/process_stack_init(&process_table[0]);
+	process_stack_init(&process_table[0]);
 	
 	//Initialize the idle task structure
 	task_idle.state = STATE_STOP;
@@ -71,10 +74,10 @@ void proc_table_init(void)
 
 }
 
-
+/*calls function pointed to by cmd within struct task_struct structure*/
 void proc_start(void)
 {
-	(current->*cmd)(); 
+	(current->cmd)(); 
 
 	current->state = STATE_STOP;
 	while(1);

@@ -19,6 +19,8 @@ extern const uint32_t _eustack[];
 #define STATE_STOP 8
 #define STATE_ZOMBIE 16
 
+void proc_table_init(void);
+
 static inline void yield(void)
 {
 	SCB->ICSR |= SCB_ICSR_PENDSVSET_Msk;
@@ -56,7 +58,7 @@ struct __attribute__ ((__packed__)) task_struct {
 	pid_t pid; //unique integer
 	uint32_t exc_return; //Special program counter value that indicates how an exception handler returns
 	uint32_t sp_start; //starting stack pointer address
-	uint32_t (*cmd)(void); //pointer to a function
+	int (*cmd)(void); //pointer to a function
 	struct registers r; //Structure that contains saved registers
 
 };
