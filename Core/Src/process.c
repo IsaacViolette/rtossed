@@ -80,5 +80,12 @@ void proc_start(void)
 	(current->cmd)(); 
 
 	current->state = STATE_STOP;
-	while(1);
+	while (1);
+}
+
+struct task_struct *scheduler(void)
+{
+	if (current == &task_idle)
+		return &process_table[0];
+	return &task_idle;
 }
