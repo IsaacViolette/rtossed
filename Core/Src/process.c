@@ -1,6 +1,7 @@
 /*Includes*/
 #include "process.h"
 #include <string.h>
+#include "sh.h"
 
 /*Defines*/
 #define PROC_MAX 4
@@ -52,15 +53,14 @@ void process_stack_init(struct task_struct *init)
 void proc_table_init(void)
 {	
 	memset(&process_table, 0, sizeof process_table);
-	//struct task_struct init_proc = process_table[0];
 
-	process_table[0].r.SP = _eustack;
-	//set stack pointer start variable
+	process_table[0].r.SP = (uint32_t) _eustack;
+	process_table[0].sp_start = (uint32_t) _eustack;
 	process_table[0].r.LR = 0;	
-	//psudo-point
+	//process_table[0].r.PC = process_start();
 	process_table[0].r.PSR = 0x01000000;
 	process_table[0].state = STATE_RUN;
-	//psudo point to sh
+	process_table[0].cmd = (uint32_t*) &sh; 
 	process_table[0].exc_return = EXC_RETURN_THREAD_PSP;	
 	process_table[0].pid = 0;
 	//process_stack_init(process_table[0]);
