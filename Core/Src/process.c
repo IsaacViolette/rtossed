@@ -54,7 +54,7 @@ void proc_table_init(void)
 	memset(&process_table, 0, sizeof process_table);
 	//struct task_struct init_proc = process_table[0];
 
-	//process_table[0].r.SP = _eustack;
+	process_table[0].r.SP = _eustack;
 	//set stack pointer start variable
 	process_table[0].r.LR = 0;	
 	//psudo-point
