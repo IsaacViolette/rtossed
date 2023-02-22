@@ -73,7 +73,8 @@ int main(void)
 	
 	/*User Space Stack Pointer Initialization*/
 	__set_PSP((uint32_t)_eustack);
-
+	
+	proc_table_init();
 	kready = 1;
 	while (1) {
 		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_1);
