@@ -32,18 +32,15 @@ void process_stack_init(struct task_struct *init)
 	*((uint32_t*)init->r.SP-16) = 0; //S1
 	*((uint32_t*)init->r.SP-17) = 0; //S0
 	*((uint32_t*)init->r.SP-18) = init->r.xPSR;
-	*((uint32_t*)init->r.SP-18) = init->r.PC;
-	*((uint32_t*)init->r.SP-18) = init->r.LR;
-	*((uint32_t*)init->r.SP-18) = init->r.r12;
-	*((uint32_t*)init->r.SP-18) = init->r.r3;
-	*((uint32_t*)init->r.SP-18) = init->r.r2;
-	*((uint32_t*)init->r.SP-18) = init->r.r1;
-	*((uint32_t*)init->r.SP-18) = init->r.r0;
+	*((uint32_t*)init->r.SP-19) = init->r.PC;
+	*((uint32_t*)init->r.SP-20) = init->r.LR;
+	*((uint32_t*)init->r.SP-21) = init->r.r12;
+	*((uint32_t*)init->r.SP-22) = init->r.r3;
+	*((uint32_t*)init->r.SP-23) = init->r.r2;
+	*((uint32_t*)init->r.SP-24) = init->r.r1;
+	*((uint32_t*)init->r.SP-25) = init->r.r0;
 
-
-
-
-
-
-
+	/*Save the updated SP varaible back to the SP that was passed*/
+	*((uint32_t*)init->r.SP-25) = init->r.SP;
+	
 }
