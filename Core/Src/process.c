@@ -1,5 +1,6 @@
 /*Includes*/
 #include "process.h"
+#include <string.h>
 
 /*Defines*/
 #define PROC_MAX 4
@@ -7,6 +8,7 @@
 //extern const uint32_t _eustack[];
 
 /*Global Variables*/
+/*Init the entire array of structures to zero*/
 struct task_struct process_table[PROC_MAX];
 struct task_struct task_idle;
 struct task_struct *current = &task_idle;
@@ -47,8 +49,27 @@ void process_stack_init(struct task_struct *init)
 
 
 /*Process Table and Idle Task Init*/
-//void proc_table_init(void)
-//{
-//	process_table[0] = {0};
-//}
+void proc_table_init(void)
+{	
+	memset(&process_table, 0, sizeof process_table);
+	//struct task_struct init_proc = process_table[0];
+
+	//process_table[0].r.SP = _eustack;
+	//set stack pointer start variable
+	process_table[0].r.LR = 0;	
+	//psudo-point
+	process_table[0].r.PSR = 0x01000000;
+	process_table[0].state = STATE_RUN;
+	//psudo point to sh
+	process_table[0].exc_return = EXC_RETURN_THREAD_PSP;	
+	process_table[0].pid = 0;
+	//process_stack_init(process_table[0]);
+	
+	//Initialize the idle task structure
+	task_idle.state = STATE_STOP;
+	task_idle.r.PSR = 0x01000000;
+	task_idle.exc_return = EXC_RETURN_THREAD_MSP_FPU;
+	task_idle.pid = -2;
+
+}
 
