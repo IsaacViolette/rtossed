@@ -11,6 +11,7 @@ struct task_struct process_table[PROC_MAX];
 struct task_struct task_idle;
 struct task_struct *current = &task_idle;
 
+/*Stack Initialization*/
 void process_stack_init(struct task_struct *init)
 {
 	*((uint32_t*)init->r.SP-1) = 0; //FPSCR
@@ -33,11 +34,11 @@ void process_stack_init(struct task_struct *init)
 	*((uint32_t*)init->r.SP-18) = init->r.xPSR;
 	*((uint32_t*)init->r.SP-18) = init->r.PC;
 	*((uint32_t*)init->r.SP-18) = init->r.LR;
-	*((uint32_t*)init->r.SP-18) = init->r.R12;
-	*((uint32_t*)init->r.SP-18) = init->r.R3;
-	*((uint32_t*)init->r.SP-18) = init->r.R2;
-	*((uint32_t*)init->r.SP-18) = init->r.R1;
-	*((uint32_t*)init->r.SP-18) = init->r.R0;
+	*((uint32_t*)init->r.SP-18) = init->r.r12;
+	*((uint32_t*)init->r.SP-18) = init->r.r3;
+	*((uint32_t*)init->r.SP-18) = init->r.r2;
+	*((uint32_t*)init->r.SP-18) = init->r.r1;
+	*((uint32_t*)init->r.SP-18) = init->r.r0;
 
 
 
