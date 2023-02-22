@@ -72,7 +72,6 @@ int main(void)
 	HAL_Delay(2500);
 	
 	/*User Space Stack Pointer Initialization*/
-	extern const uint32_t _eustack[];
 	__set_PSP((uint32_t)_eustack);
 
 	kready = 1;

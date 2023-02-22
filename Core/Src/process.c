@@ -44,3 +44,11 @@ void process_stack_init(struct task_struct *init)
 	init->r.SP = 25*4; //move stack pointer down 100 bytes, 25 addresses at 4 bytes a piece
 	
 }
+
+
+/*Process Table and Idle Task Init*/
+//void proc_table_init(void)
+//{
+//	process_table[0] = {0};
+//}
+

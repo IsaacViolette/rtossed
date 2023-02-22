@@ -8,6 +8,9 @@
 #include <stdint.h> 
 #include <unistd.h> //for pid type
 
+/*Global Variables*/
+extern const uint32_t _eustack[];
+
 /*Defines*/
 #define STATE_UNUSED 0
 #define STATE_TIME_SLEEP 1
