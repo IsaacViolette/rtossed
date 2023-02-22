@@ -41,6 +41,6 @@ void process_stack_init(struct task_struct *init)
 	*((uint32_t*)init->r.SP-25) = init->r.r0;
 
 	/*Save the updated SP variable back to the SP that was passed*/
-	init->r.SP = *((uint32_t*)init->r.SP-26);
+	init->r.SP = 25*4; //move stack pointer down 100 bytes, 25 addresses at 4 bytes a piece
 	
 }
