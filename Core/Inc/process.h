@@ -23,7 +23,9 @@ void proc_table_init(void);
 
 static inline void yield(void)
 {
+	/*Set PendSV bit to 1 in the ICSR register within SCB*/
 	SCB->ICSR |= SCB_ICSR_PENDSVSET_Msk;
+	/*Execute a Data synchronization barrier and a instruction synchronization barrier*/
 	__DSB();
 	__ISB();
 }
@@ -63,13 +65,16 @@ struct __attribute__ ((__packed__)) task_struct {
 
 };
 
+/*Context register save*/
 inline void reg_push(void)
 {
-	__asm__ __voltaile__(
+	/*push r4-r11 onto the stack*/
+	__asm__(
 		"PUSH {r4-r11}"
 	);
 }
 
+/*
 inline void restore_reg(void)
 {
 	__asm__ __volatile__(
@@ -85,5 +90,6 @@ inline void context_return(void)
 		
 	);
 }
+*/
 
 #endif /*__PROCESS_H*/

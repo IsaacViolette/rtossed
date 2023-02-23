@@ -1,17 +1,19 @@
 /*Includes*/
 #include "progs.h"
 
+/*Blink the onboard green LED*/
 void process1(void)
 {
-	while(1) {
+	while (1) {
 		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
 		HAL_Delay(500);
 	}
 }
 
+/*Blink the onboard amber LED*/
 void process2(void)
 {
-	while(1) {
+	while (1) {
 		HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_1);
 		HAL_Delay(1000);
 	}

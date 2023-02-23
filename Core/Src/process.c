@@ -53,8 +53,10 @@ void process_stack_init(struct task_struct *init)
 /*Process Table and Idle Task Init*/
 void proc_table_init(void)
 {	
+	//initialize all process tables to zero	
 	memset(&process_table, 0, sizeof process_table);
-
+	
+	//Set up process table at index 0
 	process_table[0].r.SP = (uint32_t) _eustack;
 	process_table[0].sp_start = (uint32_t) _eustack;
 	process_table[0].r.LR = 0;	
@@ -77,15 +79,20 @@ void proc_table_init(void)
 /*calls function pointed to by cmd within struct task_struct structure*/
 void proc_start(void)
 {
+	//Call the function called by cmd
 	(current->cmd)(); 
-
+	
+	//to stop a hard fault from happening, change the state to stop
 	current->state = STATE_STOP;
 	while (1);
 }
 
+/*This function decides which process to run next*/
 struct task_struct *scheduler(void)
 {
+	/*If the current task is the idle task, the return a pointer to the first process table entry*/
 	if (current == &task_idle)
 		return &process_table[0];
+	/*Otherwise return a pointer to the idle task*/
 	return &task_idle;
 }
