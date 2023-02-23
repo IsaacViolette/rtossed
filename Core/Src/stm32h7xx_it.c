@@ -188,7 +188,7 @@ void __attribute__((naked)) PendSV_Handler(void)
 void SysTick_Handler(void)
 {
 	uwTick++;
-	if(((uwTick % 32) == 0) && (kready == 1)) { 
+	if (((uwTick % 32) == 0) && (kready == 1)) { 
 		HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_0);
 		yield();
 	}
