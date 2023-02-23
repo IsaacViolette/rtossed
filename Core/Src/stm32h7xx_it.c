@@ -174,9 +174,12 @@ void DebugMon_Handler(void)
 /**
   * @brief This function handles Pendable request for system service.
   */
+/*This is where the Contxt switching happens*/
 void __attribute__((naked)) PendSV_Handler(void)
 {
-	
+	reg_push();
+	//register struct task_struct *sched_return = scheduler();	
+
 }
 
 /**

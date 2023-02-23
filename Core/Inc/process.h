@@ -20,6 +20,7 @@ extern const uint32_t _eustack[];
 #define STATE_ZOMBIE 16
 
 void proc_table_init(void);
+struct task_struct *scheduler(void);
 
 static inline void yield(void)
 {
