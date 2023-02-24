@@ -202,7 +202,8 @@ void __attribute__((naked)) PendSV_Handler(void)
 
 	current = sched_return;
 
-	sp = &(current->r.SP);
+	sp += 8;
+
 
 				
 }
