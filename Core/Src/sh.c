@@ -57,27 +57,27 @@ void getline_sh(char buf[])
 /*the following user input. Otherwise, return out of the shell.*/
 int sh(void)
 {
-	char buf[512]; //this array is used for user input
-	char print_buf[512]; //this array is used for storing characters after 'echo' command
-	printf("$ "); //shell always leads with $
-	getline_sh(buf); //receive user input into buf array
-
-	if (strncmp(buf,"echo ",5) == 0)
+	while(1)
 	{
-		/*Cycle through buf after 'echo ', and store it into print_buf array*/
-		/*making sure that the last character is /0*/
-		for (int i = 0; i < 512; i++){
-			if (buf[i+5] == '\0') {
-				print_buf[i] = '\0';
-				break;
+		char buf[512]; //this array is used for user input
+		char print_buf[512]; //this array is used for storing characters after 'echo' command
+		printf("$ "); //shell always leads with $
+		getline_sh(buf); //receive user input into buf array
+
+		if (strncmp(buf,"echo ",5) == 0)
+		{
+			/*Cycle through buf after 'echo ', and store it into print_buf array*/
+			/*making sure that the last character is /0*/
+			for (int i = 0; i < 512; i++){
+				if (buf[i+5] == '\0') {
+					print_buf[i] = '\0';
+					break;
+				}
+				print_buf[i] = buf[i+5];
 			}
-			print_buf[i] = buf[i+5];
+			printf("%s\n\r", print_buf);
 		}
-		printf("%s\n\r", print_buf);
 	}
-
-	while(1);
-
 	return 0;
 }
 
