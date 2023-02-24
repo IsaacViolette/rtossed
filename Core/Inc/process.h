@@ -87,19 +87,20 @@ inline void restore_reg(void)
 	__asm__ __volatile__(
 		"LDMIA %0, {r4-r11}"
 		:
-		: "r" (&(next->r))
+		: "r" (&(next->r.r4))
 	);
 }
 
-/*
+
 inline void context_return(void)
-{
+{	
+	struct task_struct *next = scheduler();
 	__asm__ __volatile__(
-		"LDR %0, %1"		
-		: "r" (pc)
-		: "r" ()
+		"LDR pc, %0"		
+		: 
+		: "m" (next->exc_return)
 	);
 }
-*/
+
 
 #endif /*__PROCESS_H*/

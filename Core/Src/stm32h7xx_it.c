@@ -204,7 +204,9 @@ void __attribute__((naked)) PendSV_Handler(void)
 
 	sp += 8;
 
+	restore_reg();
 
+	context_return();
 				
 }
 
