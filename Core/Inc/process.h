@@ -53,7 +53,6 @@ struct __attribute__ ((__packed__)) registers {
 	uint32_t SP;
 	uint32_t LR;
 	uint32_t PC;
-	uint32_t PSR;
 	uint32_t PRIMASK;
 	uint32_t FAULTMASK;
 	uint32_t BASEPRI;
@@ -72,7 +71,7 @@ struct __attribute__ ((__packed__)) task_struct {
 };
 
 /*Context register sare*/
-inline void reg_push(void)
+static inline void reg_push(void)
 {
 	/*push r4-r11 onto the stack*/
 	__asm__ __volatile__ (
@@ -81,7 +80,7 @@ inline void reg_push(void)
 }
 
 
-inline void restore_reg(void)
+static inline void restore_reg(void)
 {
 	struct task_struct *next = scheduler();
 	__asm__ __volatile__(
@@ -92,7 +91,7 @@ inline void restore_reg(void)
 }
 
 
-inline void context_return(void)
+static inline void context_return(void)
 {	
 	struct task_struct *next = scheduler();
 	__asm__ __volatile__(
