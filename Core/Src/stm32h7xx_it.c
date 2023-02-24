@@ -178,8 +178,18 @@ void DebugMon_Handler(void)
 void __attribute__((naked)) PendSV_Handler(void)
 {
 	reg_push();
-	//register struct task_struct *sched_return = scheduler();	
-
+	register struct task_struct *sched_return = scheduler();	
+	register uint32_t *sp asm("sp");
+	
+	current->r.r4 = *(sp);
+	current->r.r5 = *(sp+1);
+	current->r.r6 = *(sp+2);
+	current->r.r7 = *(sp+3);
+	current->r.r8 = *(sp+4);
+	current->r.r9 = *(sp+5);
+	current->r.r10 = *(sp+6);
+	current->r.r11 = *(sp+7);
+	
 }
 
 /**

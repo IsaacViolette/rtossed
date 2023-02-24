@@ -10,6 +10,7 @@
 
 /*Global Variables*/
 extern const uint32_t _eustack[];
+struct task_struct *current;
 
 /*Defines*/
 #define STATE_UNUSED 0
@@ -43,6 +44,7 @@ struct __attribute__ ((__packed__)) registers {
 	uint32_t r7;
 	uint32_t r8;
 	uint32_t r9;
+	uint32_t r10;
 	uint32_t r11;
 	uint32_t r12;
 	uint32_t SP;
@@ -70,7 +72,7 @@ struct __attribute__ ((__packed__)) task_struct {
 inline void reg_push(void)
 {
 	/*push r4-r11 onto the stack*/
-	__asm__(
+	__asm__ __volatile__ (
 		"PUSH {r4-r11}"
 	);
 }
