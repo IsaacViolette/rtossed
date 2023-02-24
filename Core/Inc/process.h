@@ -80,9 +80,8 @@ static inline void reg_push(void)
 }
 
 
-static inline void restore_reg(void)
+static inline void restore_reg(struct task_struct *next)
 {
-	struct task_struct *next = scheduler();
 	__asm__ __volatile__(
 		"LDMIA %0, {r4-r11}"
 		:
@@ -91,9 +90,8 @@ static inline void restore_reg(void)
 }
 
 
-static inline void context_return(void)
+static inline void context_return(struct task_struct *next)
 {	
-	struct task_struct *next = scheduler();
 	__asm__ __volatile__(
 		"LDR pc, %0"		
 		: 

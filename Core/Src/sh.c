@@ -76,6 +76,8 @@ int sh(void)
 		printf("%s\n\r", print_buf);
 	}
 
+	while(1);
+
 	return 0;
 }
 
