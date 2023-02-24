@@ -10,7 +10,8 @@
 
 /*Global Variables*/
 extern const uint32_t _eustack[];
-struct task_struct *current;
+extern struct task_struct *current;
+extern struct task_struct task_idle;
 
 /*Defines*/
 #define STATE_UNUSED 0
@@ -20,8 +21,10 @@ struct task_struct *current;
 #define STATE_STOP 8
 #define STATE_ZOMBIE 16
 
+/*Prototypes*/
 void proc_table_init(void);
 struct task_struct *scheduler(void);
+
 
 static inline void yield(void)
 {
@@ -68,7 +71,7 @@ struct __attribute__ ((__packed__)) task_struct {
 
 };
 
-/*Context register save*/
+/*Context register sare*/
 inline void reg_push(void)
 {
 	/*push r4-r11 onto the stack*/

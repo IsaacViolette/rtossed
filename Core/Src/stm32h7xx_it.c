@@ -190,6 +190,18 @@ void __attribute__((naked)) PendSV_Handler(void)
 	current->r.r10 = *(sp+6);
 	current->r.r11 = *(sp+7);
 	
+	
+	if(sched_return == &task_idle)
+		current->r.SP = __get_PSP();
+	else if(current == &task_idle)
+		__set_PSP(sched_return->r.SP);
+	else {
+		current->r.SP = __get_PSP();
+		__set_PSP(sched_return->r.SP);	
+	}
+
+
+				
 }
 
 /**
