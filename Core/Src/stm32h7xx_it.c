@@ -177,10 +177,12 @@ void DebugMon_Handler(void)
 /*This is where the Context switching happens*/
 void __attribute__((naked)) PendSV_Handler(void)
 {
+	//Push registers to the stack
 	reg_push();
 	register struct task_struct *sched_return = scheduler();	
 	register uint32_t *sp asm("sp");
 	
+	//copy registers r4-r11 from the stack to the current process
 	current->r.r4 = *(sp);
 	current->r.r5 = *(sp+1);
 	current->r.r6 = *(sp+2);
@@ -190,7 +192,7 @@ void __attribute__((naked)) PendSV_Handler(void)
 	current->r.r10 = *(sp+6);
 	current->r.r11 = *(sp+7);
 	
-	
+	//Process stack pointer needs to be saved and restored
 	if(sched_return == &task_idle)
 		current->r.SP = __get_PSP();
 	else if(current == &task_idle)
@@ -199,13 +201,17 @@ void __attribute__((naked)) PendSV_Handler(void)
 		current->r.SP = __get_PSP();
 		__set_PSP(sched_return->r.SP);	
 	}
-
+	
+	//save the current structure to the next structure
 	current = sched_return;
-
+	
+	//clean up the stack, change the stack pointer to point to the stack location before context register save
 	sp += 8;
-
+	
+	//restore register r4-r11 from the next process
 	restore_reg(sched_return);
 
+	//return from exception and load PC
 	context_return(sched_return);
 				
 }

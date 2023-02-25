@@ -70,7 +70,7 @@ struct __attribute__ ((__packed__)) task_struct {
 
 };
 
-/*Context register sare*/
+/*Context register save*/
 static inline void reg_push(void)
 {
 	/*push r4-r11 onto the stack*/
@@ -79,9 +79,10 @@ static inline void reg_push(void)
 	);
 }
 
-
+/*Context Restore Registers*/
 static inline void restore_reg(struct task_struct *next)
 {
+	//Load r4-r11 from the passed structure
 	__asm__ __volatile__(
 		"LDMIA %0, {r4-r11}"
 		:
@@ -89,9 +90,10 @@ static inline void restore_reg(struct task_struct *next)
 	);
 }
 
-
+/*Contesxt Switch Return*/
 static inline void context_return(struct task_struct *next)
 {	
+	//loads the PC from exc_return within the passed struct
 	__asm__ __volatile__(
 		"LDR pc, %0"		
 		: 
