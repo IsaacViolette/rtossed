@@ -2,12 +2,14 @@
 #include "progs.h"
 
 /*Blink the onboard green LED*/
-void process1(void)
+int process1(void)
 {
 	while (1) {
 		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
 		HAL_Delay(500);
 	}
+
+	return 0;
 }
 
 /*Blink the onboard amber LED*/

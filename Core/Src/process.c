@@ -1,5 +1,6 @@
 /*Includes*/
 #include "process.h"
+#include "progs.h"
 #include <string.h>
 #include "sh.h"
 
@@ -75,6 +76,11 @@ void proc_table_init(void)
 	task_idle.exc_return = EXC_RETURN_THREAD_MSP_FPU;
 	task_idle.pid = -2;
 
+	//Initialize process 1
+	process_table[1].r.SP = ((uint32_t) _eustack) - 0x800;
+	process_table[1].sp_start = ((uint32_t) _eustack) - 0x800;
+	process_table[1].pid = 1;
+	process_table[1].cmd = process1;
 }
 
 /*calls function pointed to by cmd within struct task_struct structure*/

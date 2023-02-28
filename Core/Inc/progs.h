@@ -6,7 +6,7 @@
 #include "stm32h7xx_hal.h"
 
 
-void process1(void);
+int process1(void);
 
 void process2(void);
 
