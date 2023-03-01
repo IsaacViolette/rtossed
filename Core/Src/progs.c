@@ -1,12 +1,13 @@
 /*Includes*/
 #include "progs.h"
+#include "user_syscalls.h"
 
 /*Blink the onboard green LED*/
 int process1(void)
 {
 	while (1) {
 		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
-		HAL_Delay(500);
+		microsleep(500000);
 	}
 
 	return 0;
@@ -17,7 +18,7 @@ void process2(void)
 {
 	while (1) {
 		HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_1);
-		HAL_Delay(1000);
+		microsleep(1000);
 	}
 
 }
