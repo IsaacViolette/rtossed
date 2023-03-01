@@ -77,10 +77,16 @@ void proc_table_init(void)
 	task_idle.pid = -2;
 
 	//Initialize process 1
-	process_table[1].r.SP = ((uint32_t) _eustack) - 0x800;
-	process_table[1].sp_start = ((uint32_t) _eustack) - 0x800;
-	process_table[1].pid = 1;
+	process_table[1].r.SP = (uint32_t) _eustack - 0x800;
+	process_table[1].sp_start = (uint32_t) _eustack - 0x800;
+	process_table[1].r.LR = 0;
+	process_table[0].r.PC = (uint32_t) proc_start;
+	process_table[1].r.xPSR = 0x01000000;
+	process_table[1].state = STATE_RUN;
 	process_table[1].cmd = process1;
+	process_table[1].exc_return = EXC_RETURN_THREAD_PSP;
+	process_table[1].pid = 1;
+	process_stack_init(&process_table[1]);
 }
 
 /*calls function pointed to by cmd within struct task_struct structure*/
@@ -100,7 +106,7 @@ struct task_struct *scheduler(void)
 	/*If the current task is the idle task, the return a pointer to the first process table entry*/
 	if (current == &task_idle)
 		return &process_table[0];
-	/*If current points to process 0*/
+	/*If current points to process table 0*/
 	if(current == &process_table[0])
 		return &process_table[1];
 	/*Otherwise return a pointer to the idle task*/
