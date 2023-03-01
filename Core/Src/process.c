@@ -118,17 +118,16 @@ struct task_struct *scheduler(void)
 {
 	static int next_process = 0;
 
-	for (int i = 0; i < 5; i++) {
+	for (int i = 0; i < 4; i++) {
 		next_process++; //Must increment the process table each loop
 		if(next_process == 4)
 			next_process = 0; //only 0-3 process tables, need to reset to the start after 3
 		if ((process_table[next_process].state == STATE_TIME_SLEEP) && (uwTick > process_table[next_process].w_time))
-			process_table[next_process].state |= STATE_RUN;
+			process_table[next_process].state = STATE_RUN;
 		if (process_table[next_process].state == STATE_RUN)
 			return &process_table[next_process];
-		/*If no table is runnable because not enough time has elapsed, break out of loop and return a pointer to the orignal table*/
-		if(i == 4)
-			break;
 	}
-			return &process_table[next_process];
+
+	/*If no table is runnable because not enough time has elapsed, return a pointer to the orignal table*/
+	return &process_table[next_process];
 }
