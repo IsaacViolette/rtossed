@@ -80,7 +80,7 @@ void proc_table_init(void)
 	process_table[1].r.SP = (uint32_t) _eustack - 0x800;
 	process_table[1].sp_start = (uint32_t) _eustack - 0x800;
 	process_table[1].r.LR = 0;
-	process_table[0].r.PC = (uint32_t) proc_start;
+	process_table[1].r.PC = (uint32_t) proc_start;
 	process_table[1].r.xPSR = 0x01000000;
 	process_table[1].state = STATE_RUN;
 	process_table[1].cmd = process1;
