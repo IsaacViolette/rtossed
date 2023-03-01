@@ -127,8 +127,9 @@ struct task_struct *scheduler(void)
 		next_process++; //Must increment the process table each loop
 		if(next_process == 4)
 			next_process = 0; //only 0-3 process tables, need to reset to the start after 3
-		/*If no table is runnable because not enough time has elapsed, return a pointer to the orignal table*/
+		/*If no table is runnable because not enough time has elapsed, break out of loop and return a pointer to the orignal table*/
 		if(i == 4)
-			return &process_table[next_process];
+			break;
 	}
+			return &process_table[next_process];
 }
