@@ -101,15 +101,35 @@ void proc_start(void)
 }
 
 /*This function decides which process to run next*/
+//struct task_struct *scheduler(void)
+//{
+	/*If the current task is the idle task, the return a pointer to the first process table entry*/
+	//if (current == &task_idle)
+		//return &process_table[0];
+	/*If current points to process table 0*/
+	//if(current == &process_table[0])
+		//return &process_table[1];
+	/*Otherwise return a pointer to the idle task*/
+	//return &task_idle;
+
+//}
+
 struct task_struct *scheduler(void)
 {
-	/*If the current task is the idle task, the return a pointer to the first process table entry*/
-	if (current == &task_idle)
-		return &process_table[0];
-	/*If current points to process table 0*/
-	if(current == &process_table[0])
-		return &process_table[1];
-	/*Otherwise return a pointer to the idle task*/
-	return &task_idle;
+	static int next_process = 0;
 
+	for (int i = 0; i < 5; i++) {
+		if ((process_table[next_process].state &= STATE_TIME_SLEEP) && (uwTick > process_table[next_process].w_time)) {
+			process_table[next_process].state |= STATE_RUN;
+			if (process_table[next_process].state == STATE_RUN) {
+				return &process_table[next_process];
+			}
+		next_process++; //Must increment the process table each loop
+		if(next_process == 4)
+			next_process = 0; //only 0-3 process tables, need to reset to the start after 3
+		/*If no table is runnable because not enough time has elapsed, return a pointer to the orignal table*/
+		if(i == 4)
+			return &process_table[next_process];
+		}
+	}
 }
