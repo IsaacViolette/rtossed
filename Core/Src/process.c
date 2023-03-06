@@ -64,14 +64,14 @@ void proc_table_init(void)
 	process_table[0].r.LR = 0;	
 	process_table[0].r.PC = (uint32_t) proc_start;
 	process_table[0].r.xPSR = 0x01000000;
-	process_table[0].state = STATE_RUN;
+	process_table[0].state |= STATE_RUN;
 	process_table[0].cmd = sh; 
 	process_table[0].exc_return = EXC_RETURN_THREAD_PSP;	
 	process_table[0].pid = 0;
 	process_stack_init(&process_table[0]);
 	
 	//Initialize the idle task structure
-	task_idle.state = STATE_STOP;
+	task_idle.state |= STATE_STOP;
 	task_idle.r.xPSR = 0x01000000;
 	task_idle.exc_return = EXC_RETURN_THREAD_MSP_FPU;
 	task_idle.pid = -2;
@@ -82,7 +82,7 @@ void proc_table_init(void)
 	process_table[1].r.LR = 0;
 	process_table[1].r.PC = (uint32_t) proc_start;
 	process_table[1].r.xPSR = 0x01000000;
-	process_table[1].state = STATE_RUN;
+	process_table[1].state |= STATE_RUN;
 	process_table[1].cmd = process1;
 	process_table[1].exc_return = EXC_RETURN_THREAD_PSP;
 	process_table[1].pid = 1;
@@ -96,7 +96,7 @@ void proc_start(void)
 	(current->cmd)(); 
 	
 	//to stop a hard fault from happening, change the state to stop
-	current->state = STATE_STOP;
+	current->state |= STATE_STOP;
 	while (1);
 }
 
@@ -106,10 +106,12 @@ struct task_struct *scheduler(void)
 
 	for (int i = 0; i < 4; i++) {
 		next_process++; //Must increment the process table each loop
-		if(next_process == 4)
+		if (next_process == 4)
 			next_process = 0; //only 0-3 process tables, need to reset to the start after 3
-		if ((process_table[next_process].state == STATE_TIME_SLEEP) && (uwTick > process_table[next_process].w_time))
-			process_table[next_process].state = STATE_RUN;
+		if ((process_table[next_process].state |= STATE_TIME_SLEEP) && (uwTick > process_table[next_process].w_time)) {
+			process_table[next_process].state &= ~(STATE_TIME_SLEEP);
+			process_table[next_process].state |= STATE_RUN;
+		}
 		if (process_table[next_process].state == STATE_RUN)
 			return &process_table[next_process];
 	}
