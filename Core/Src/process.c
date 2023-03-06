@@ -108,11 +108,11 @@ struct task_struct *scheduler(void)
 		next_process++; //Must increment the process table each loop
 		if (next_process == 4)
 			next_process = 0; //only 0-3 process tables, need to reset to the start after 3
-		if ((process_table[next_process].state &= STATE_TIME_SLEEP) && (uwTick > process_table[next_process].w_time)) {
+		if ((process_table[next_process].state & STATE_TIME_SLEEP) && (uwTick > process_table[next_process].w_time)) {
 			process_table[next_process].state &= ~(STATE_TIME_SLEEP);
 			process_table[next_process].state |= STATE_RUN;
 		}
-		if (process_table[next_process].state &= STATE_RUN)
+		if (process_table[next_process].state & STATE_RUN)
 			return &process_table[next_process];
 	}
 
