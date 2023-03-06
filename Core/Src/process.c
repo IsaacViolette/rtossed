@@ -100,20 +100,6 @@ void proc_start(void)
 	while (1);
 }
 
-/*This function decides which process to run next*/
-//struct task_struct *scheduler(void)
-//{
-	/*If the current task is the idle task, the return a pointer to the first process table entry*/
-	//if (current == &task_idle)
-		//return &process_table[0];
-	/*If current points to process table 0*/
-	//if(current == &process_table[0])
-		//return &process_table[1];
-	/*Otherwise return a pointer to the idle task*/
-	//return &task_idle;
-
-//}
-
 struct task_struct *scheduler(void)
 {
 	static int next_process = 0;

@@ -6,4 +6,4 @@
 
 void microsleep(uint32_t sleep_amount);
 
-#endif /**/
+#endif /*USER_SYSCALLS_H*/
