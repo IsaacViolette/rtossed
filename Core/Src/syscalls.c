@@ -1,6 +1,10 @@
 #include <stddef.h>
 #include <stdint.h>
 #include "usart.h"
+#include "process.h"
+
+static struct task_struct *io_wait = NULL; 
+
 
 int _write(int file, void *ptr, size_t len)
 {
