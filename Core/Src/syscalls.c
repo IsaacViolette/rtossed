@@ -23,7 +23,9 @@ _ssize_t _read_r(struct _reent *ptr, int fd, void *buf, size_t cnt)
 {
 	if (cnt == 0)
 		return 0;
+	/*Interrupt based byte receive*/
 	HAL_UART_Receive_IT(&huart3, (uint8_t *)buf, 1);
+	/* context switch */
 	current->state &= ~(STATE_RUN);
 	current->state |= STATE_IO_SLEEP;
 	io_wait = current;
@@ -32,6 +34,7 @@ _ssize_t _read_r(struct _reent *ptr, int fd, void *buf, size_t cnt)
 	return 1;
 }
 
+/*USART3 Interrupt Callback*/
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef * huart)
 {
 	io_wait->state &= ~(STATE_IO_SLEEP);
