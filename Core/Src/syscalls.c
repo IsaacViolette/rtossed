@@ -29,5 +29,7 @@ _ssize_t _read_r(struct _reent *ptr, int fd, void *buf, size_t cnt)
 	io_wait = current;
 	yield();
 
+	return 1;
+
 }
 
