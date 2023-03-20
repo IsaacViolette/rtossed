@@ -21,11 +21,13 @@ _ssize_t _write_r (struct _reent *ptr, int fd, const void *buf, size_t cnt)
 /*Read 1 byte of data from user input*/
 _ssize_t _read_r(struct _reent *ptr, int fd, void *buf, size_t cnt)
 {
-	HAL_StatusTypeDef ret;
-	do {
-		ret = HAL_UART_Receive(&huart3, (uint8_t *) buf, 1, HAL_MAX_DELAY);
-	} while(ret != HAL_OK);
-	
-	return 1;
+	if (cnt == 0)
+		return 0;
+	HAL_UART_Receive_IT(&huart3, (uint8_t *)buf, 1);
+	current->state &= ~(STATE_RUN);
+	current->state |= STATE_IO_SLEEP;
+	io_wait = current;
+	yield();
+
 }
 
