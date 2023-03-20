@@ -117,5 +117,5 @@ struct task_struct *scheduler(void)
 	}
 
 	/*If no table is runnable because not enough time has elapsed, return a pointer to the orignal table*/
-	return &process_table[next_process];
+	return &task_idle;
 }
