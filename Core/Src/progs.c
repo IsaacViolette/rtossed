@@ -1,6 +1,8 @@
 /*Includes*/
+#include <stdio.h>
 #include "progs.h"
 #include "user_syscalls.h"
+#include "process.h"
 
 /*Blink the onboard green LED*/
 int process1(void)
