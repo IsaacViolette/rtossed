@@ -1,4 +1,6 @@
 #include "process.h"
+#define __NR_millisleep 2
+#define __NR_kill 5
 
 
 
