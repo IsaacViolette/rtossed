@@ -15,13 +15,15 @@ int process1(void)
 
 		i++;
 		
-		/*Block if no lock is availible*/
-		while (HAL_HSEM_Take(9,current->pid) != HAL_OK) {
-			yield();
+		/*Block if no lock is availible, 9 was used randomly for lock ID*/
+		while (HAL_HSEM_Take(9, current->pid) != HAL_OK) {
+			yield(); //Go to next process
 		}
 
+		/*Printed onto minicom at 2400 baud rate, used to check if locking is working*/
 		printf("Current: %d | The current value of i is: %u\r\n",current->pid,i);
 
+		/*Remove hardware lock*/
 		HAL_HSEM_Release(9, current->pid);
 	}
 
