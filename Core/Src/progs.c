@@ -9,12 +9,17 @@ int process1(void)
 {
 	static uint8_t i; //project 2 increment
 	while (1) {
-		microsleep(0000);
+		microsleep(1000);
 		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
 
 		i++;
+		
+		/*Block if no lock is availible*/
+		while(HAL_HSEEM_Take(9,current->pid) != 0);
 
-		printf("Current: %d | The current calue of i is: %u\r\n",current->pid,i);
+		printf("Current: %d | The current value of i is: %u\r\n",current->pid,i);
+
+		HAL_HSEM_Release(9, current->pid);
 	}
 
 	return 0;
