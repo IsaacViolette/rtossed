@@ -15,7 +15,7 @@ int process1(void)
 		i++;
 		
 		/*Block if no lock is availible*/
-		while(HAL_HSEEM_Take(9,current->pid) != 0);
+		while(HAL_HSEM_Take(9,current->pid) != 0);
 
 		printf("Current: %d | The current value of i is: %u\r\n",current->pid,i);
 
