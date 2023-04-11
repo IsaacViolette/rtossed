@@ -9,7 +9,7 @@ int process1(void)
 {
 	static uint8_t i; //project 2 increment
 	while (1) {
-		microsleep(1000);
+		microsleep(0000);
 		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
 
 		i++;
