@@ -58,6 +58,9 @@ int main(void)
 	//String used to print onto display
 	char buf[] = "ECE331";
 	
+	//Enable Hardware Semaphore (locking)
+	__HAL_RCC_HSEM_CLK_ENABLE();
+			
 	//Preliminary code for TFT to work
 	HAL_GPIO_WritePin(BACK_LITE_GPIO_Port,BACK_LITE_Pin,1);
 	Adafruit_ST7735_initR(INITR_18GREENTAB);
