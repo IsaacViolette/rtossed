@@ -4,10 +4,11 @@
 #include "user_syscalls.h"
 #include "process.h"
 
+HAL_StatusTypeDef i = 0; //project 2 increment
+
 /*Blink the onboard green LED*/
 int process1(void)
 {
-	HAL_StatusTypeDef i = 0; //project 2 increment
 	while (1) {
 		microsleep(1000);
 		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
