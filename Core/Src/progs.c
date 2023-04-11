@@ -7,7 +7,7 @@
 /*Blink the onboard green LED*/
 int process1(void)
 {
-	static uint8_t i; //project 2 increment
+	HAL_StatusTypeDef i = 0; //project 2 increment
 	while (1) {
 		microsleep(1000);
 		HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
@@ -15,7 +15,9 @@ int process1(void)
 		i++;
 		
 		/*Block if no lock is availible*/
-		while(HAL_HSEM_Take(9,current->pid) != 0);
+		while (HAL_HSEM_Take(9,current->pid) != HAL_OK) {
+			yield();
+		}
 
 		printf("Current: %d | The current value of i is: %u\r\n",current->pid,i);
 
